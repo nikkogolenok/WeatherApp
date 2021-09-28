@@ -56,15 +56,47 @@
 		447D441A2703377B00302C5B /* WeatherApp */ = {
 			isa = PBXGroup;
 			children = (
-				447D441B2703377C00302C5B /* AppDelegate.swift */,
-				447D441D2703377C00302C5B /* SceneDelegate.swift */,
-				447D441F2703377C00302C5B /* ViewController.swift */,
-				447D44212703377C00302C5B /* Main.storyboard */,
-				447D44242703378100302C5B /* Assets.xcassets */,
-				447D44262703378100302C5B /* LaunchScreen.storyboard */,
-				447D44292703378100302C5B /* Info.plist */,
+				447D44322703458900302C5B /* Model */,
+				447D44302703454200302C5B /* Views */,
+				447D44312703457000302C5B /* Controllers */,
+				447D442F270344C500302C5B /* SupportingFiles */,
 			);
 			path = WeatherApp;
+			sourceTree = "<group>";
+		};
+		447D442F270344C500302C5B /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				447D441B2703377C00302C5B /* AppDelegate.swift */,
+				447D441D2703377C00302C5B /* SceneDelegate.swift */,
+				447D44242703378100302C5B /* Assets.xcassets */,
+				447D44292703378100302C5B /* Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		447D44302703454200302C5B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				447D44212703377C00302C5B /* Main.storyboard */,
+				447D44262703378100302C5B /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		447D44312703457000302C5B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				447D441F2703377C00302C5B /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		447D44322703458900302C5B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,7 +323,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 84N4PJWN7L;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = WeatherApp/Info.plist;
+				INFOPLIST_FILE = WeatherApp/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -319,7 +351,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 84N4PJWN7L;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = WeatherApp/Info.plist;
+				INFOPLIST_FILE = WeatherApp/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
