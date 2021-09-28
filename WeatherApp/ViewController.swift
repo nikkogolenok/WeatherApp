@@ -9,11 +9,18 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    // MARK: - Variables
+    
+    // MARK: - Outlet
+    
+    
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
-
-
+    
+    // MARK: - Methods
+    
+    // MARK: - Actions
 }
 
