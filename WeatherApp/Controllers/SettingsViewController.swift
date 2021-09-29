@@ -10,15 +10,12 @@ import UIKit
 class SettingsViewController: UITableViewController {
     
     // MARK: - Outlet
-    @IBOutlet weak var temperatureLabel: UILabel!
+    @IBOutlet weak var settingsView: UIView!
     @IBOutlet weak var temperatureSegmentedControl: UISegmentedControl!
-    
-    @IBOutlet weak var speedLabel: UILabel!
     @IBOutlet weak var speedSegmentedControl: UISegmentedControl!
-    
-    @IBOutlet weak var pressureLabel: UILabel!
     @IBOutlet weak var pressureSegmentedControl: UISegmentedControl!
     
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
     }
