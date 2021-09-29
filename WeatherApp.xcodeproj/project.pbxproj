@@ -14,6 +14,7 @@
 		447D44252703378100302C5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 447D44242703378100302C5B /* Assets.xcassets */; };
 		447D44282703378100302C5B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 447D44262703378100302C5B /* LaunchScreen.storyboard */; };
 		447D443427044C5900302C5B /* CurrentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447D443327044C5900302C5B /* CurrentWeather.swift */; };
+		447D44372704858A00302C5B /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447D44362704858A00302C5B /* UIView+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		447D44272703378100302C5B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		447D44292703378100302C5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		447D443327044C5900302C5B /* CurrentWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeather.swift; sourceTree = "<group>"; };
+		447D44362704858A00302C5B /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 		447D441A2703377B00302C5B /* WeatherApp */ = {
 			isa = PBXGroup;
 			children = (
+				447D44352704856300302C5B /* Extension */,
 				447D44322703458900302C5B /* Model */,
 				447D44302703454200302C5B /* Views */,
 				447D44312703457000302C5B /* Controllers */,
@@ -100,6 +103,14 @@
 				447D443327044C5900302C5B /* CurrentWeather.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		447D44352704856300302C5B /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				447D44362704858A00302C5B /* UIView+Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,6 +187,7 @@
 				447D44202703377C00302C5B /* ViewController.swift in Sources */,
 				447D441C2703377C00302C5B /* AppDelegate.swift in Sources */,
 				447D443427044C5900302C5B /* CurrentWeather.swift in Sources */,
+				447D44372704858A00302C5B /* UIView+Extension.swift in Sources */,
 				447D441E2703377C00302C5B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
