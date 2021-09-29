@@ -1,0 +1,31 @@
+//
+//  SettingsViewController.swift
+//  WeatherApp
+//
+//  Created by Никита Коголенок on 29.09.21.
+//
+
+import UIKit
+
+class SettingsViewController: UITableViewController {
+    
+    // MARK: - Outlet
+    @IBOutlet weak var temperatureLabel: UILabel!
+    @IBOutlet weak var temperatureSegmentedControl: UISegmentedControl!
+    
+    @IBOutlet weak var speedLabel: UILabel!
+    @IBOutlet weak var speedSegmentedControl: UISegmentedControl!
+    
+    @IBOutlet weak var pressureLabel: UILabel!
+    @IBOutlet weak var pressureSegmentedControl: UISegmentedControl!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+    // MARK: - ACtion
+    @IBAction func doneAction(_ sender: UIBarButtonItem) {
+        dismiss(animated: true)
+    }
+    
+}
