@@ -131,11 +131,18 @@ struct Daily: Codable {
 
 // MARK: - FeelsLike
 struct FeelsLike: Codable {
-    let day, night, eve, morn: Double
+    let day: Double
+    let night: Double
+    let eve: Double
+    let morn: Double
 }
 
 // MARK: - Temp
 struct Temp: Codable {
-    let day, min, max, night: Double
-    let eve, morn: Double
+    let day: Double
+    let min: Double
+    let max: Double
+    let night: Double
+    let eve: Double
+    let morn: Double
 }
