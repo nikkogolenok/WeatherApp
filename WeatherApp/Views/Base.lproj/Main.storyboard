@@ -447,14 +447,14 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TuI-ra-5Ey">
                                 <rect key="frame" x="0.0" y="550" width="414" height="292"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="RDt-YH-py5">
-                                        <rect key="frame" x="59.5" y="109" width="295" height="74"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="RDt-YH-py5">
+                                        <rect key="frame" x="-23.5" y="109" width="461" height="74"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="fRF-cR-LtA">
-                                                <rect key="frame" x="0.0" y="0.0" width="57.5" height="74"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="111.5" height="74"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M7H-JN-YnB">
-                                                        <rect key="frame" x="5" y="0.0" width="48" height="48"/>
+                                                        <rect key="frame" x="32" y="0.0" width="48" height="48"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="M7H-JN-YnB" secondAttribute="height" multiplier="1:1" id="mLd-gk-9in"/>
                                                         </constraints>
@@ -462,7 +462,7 @@
                                                         <buttonConfiguration key="configuration" style="plain" image="car" catalog="system"/>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Спутник " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BQT-K3-aK0">
-                                                        <rect key="frame" x="0.0" y="56" width="57.5" height="18"/>
+                                                        <rect key="frame" x="27" y="56" width="57.5" height="18"/>
                                                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="15"/>
                                                         <color key="textColor" systemColor="systemOrangeColor"/>
                                                         <nil key="highlightedColor"/>
@@ -470,7 +470,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="6g5-Qg-Nep">
-                                                <rect key="frame" x="67.5" y="0.0" width="111.5" height="74"/>
+                                                <rect key="frame" x="116.5" y="0.0" width="111.5" height="74"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JsG-KH-6Qb">
                                                         <rect key="frame" x="32" y="0.0" width="48" height="48"/>
@@ -489,10 +489,10 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="G6L-hs-Vju">
-                                                <rect key="frame" x="189" y="0.0" width="48" height="74"/>
+                                                <rect key="frame" x="233" y="0.0" width="111.5" height="74"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Of5-vh-yBZ">
-                                                        <rect key="frame" x="0.0" y="0.0" width="48" height="48"/>
+                                                        <rect key="frame" x="32" y="0.0" width="48" height="48"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="Of5-vh-yBZ" secondAttribute="height" multiplier="1:1" id="Dhw-VK-RuK"/>
                                                         </constraints>
@@ -500,7 +500,7 @@
                                                         <buttonConfiguration key="configuration" style="plain" image="car" catalog="system"/>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Радар " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R54-ql-1YE">
-                                                        <rect key="frame" x="3" y="56" width="42.5" height="18"/>
+                                                        <rect key="frame" x="34.5" y="56" width="42.5" height="18"/>
                                                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="15"/>
                                                         <color key="textColor" systemColor="systemOrangeColor"/>
                                                         <nil key="highlightedColor"/>
@@ -508,10 +508,10 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Fx2-Bo-ZdT">
-                                                <rect key="frame" x="247" y="0.0" width="48" height="74"/>
+                                                <rect key="frame" x="349.5" y="0.0" width="111.5" height="74"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cmc-t8-3nY">
-                                                        <rect key="frame" x="0.0" y="0.0" width="48" height="48"/>
+                                                        <rect key="frame" x="32" y="0.0" width="48" height="48"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="cmc-t8-3nY" secondAttribute="height" multiplier="1:1" id="48b-bL-95g"/>
                                                         </constraints>
@@ -519,7 +519,7 @@
                                                         <buttonConfiguration key="configuration" style="plain" image="car" catalog="system"/>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ураган" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MjP-K8-QOt">
-                                                        <rect key="frame" x="2" y="56" width="44.5" height="18"/>
+                                                        <rect key="frame" x="33.5" y="56" width="44.5" height="18"/>
                                                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="15"/>
                                                         <color key="textColor" systemColor="systemOrangeColor"/>
                                                         <nil key="highlightedColor"/>

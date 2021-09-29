@@ -21,6 +21,18 @@ class MapViewController: UIViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        satelliteImage.addCornerRadius(radius: satelliteImage.frame.width / 2)
+        satelliteImage.backgroundColor = .red
+        
+        precipitationImage.addCornerRadius(radius: precipitationImage.frame.width / 2)
+        precipitationImage.backgroundColor = .red
+        
+        radarImage.addCornerRadius(radius: radarImage.layer.frame.width / 2)
+        radarImage.backgroundColor = .red
+        
+        hurricaneImage.addCornerRadius(radius: hurricaneImage.frame.width / 2)
+        hurricaneImage.backgroundColor = .red
     }
     
     // MARK: - Actions
