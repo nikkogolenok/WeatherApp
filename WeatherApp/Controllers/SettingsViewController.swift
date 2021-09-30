@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SettingsViewController: UITableViewController {
+class SettingsViewController: UIViewController {
     
     // MARK: - Outlet
     @IBOutlet weak var temperatureSegmentedControl: UISegmentedControl!
