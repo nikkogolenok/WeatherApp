@@ -13,10 +13,11 @@
 		447D44232703377C00302C5B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 447D44212703377C00302C5B /* Main.storyboard */; };
 		447D44252703378100302C5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 447D44242703378100302C5B /* Assets.xcassets */; };
 		447D44282703378100302C5B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 447D44262703378100302C5B /* LaunchScreen.storyboard */; };
-		447D443427044C5900302C5B /* CurrentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447D443327044C5900302C5B /* CurrentWeather.swift */; };
+		447D443427044C5900302C5B /* CurrentWeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447D443327044C5900302C5B /* CurrentWeatherData.swift */; };
 		447D44372704858A00302C5B /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447D44362704858A00302C5B /* UIView+Extension.swift */; };
 		447D44392704A5DD00302C5B /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447D44382704A5DD00302C5B /* SettingsViewController.swift */; };
 		44AA76122705287700BD27FA /* LocationViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AA76112705287700BD27FA /* LocationViewController+Extension.swift */; };
+		44AA76152705EA5800BD27FA /* CurrentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AA76142705EA5800BD27FA /* CurrentWeather.swift */; };
 		44EE9CD12704DFB100E388AD /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44EE9CD02704DFB100E388AD /* MapViewController.swift */; };
 		44EE9CD32704EEDB00E388AD /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44EE9CD22704EEDB00E388AD /* LocationViewController.swift */; };
 /* End PBXBuildFile section */
@@ -30,10 +31,11 @@
 		447D44242703378100302C5B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		447D44272703378100302C5B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		447D44292703378100302C5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		447D443327044C5900302C5B /* CurrentWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeather.swift; sourceTree = "<group>"; };
+		447D443327044C5900302C5B /* CurrentWeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherData.swift; sourceTree = "<group>"; };
 		447D44362704858A00302C5B /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		447D44382704A5DD00302C5B /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		44AA76112705287700BD27FA /* LocationViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LocationViewController+Extension.swift"; sourceTree = "<group>"; };
+		44AA76142705EA5800BD27FA /* CurrentWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeather.swift; sourceTree = "<group>"; };
 		44EE9CD02704DFB100E388AD /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		44EE9CD22704EEDB00E388AD /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -112,7 +114,8 @@
 		447D44322703458900302C5B /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				447D443327044C5900302C5B /* CurrentWeather.swift */,
+				447D443327044C5900302C5B /* CurrentWeatherData.swift */,
+				44AA76142705EA5800BD27FA /* CurrentWeather.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -207,9 +210,10 @@
 				447D44202703377C00302C5B /* MainViewController.swift in Sources */,
 				447D441C2703377C00302C5B /* AppDelegate.swift in Sources */,
 				44AA76122705287700BD27FA /* LocationViewController+Extension.swift in Sources */,
-				447D443427044C5900302C5B /* CurrentWeather.swift in Sources */,
+				447D443427044C5900302C5B /* CurrentWeatherData.swift in Sources */,
 				447D44372704858A00302C5B /* UIView+Extension.swift in Sources */,
 				447D441E2703377C00302C5B /* SceneDelegate.swift in Sources */,
+				44AA76152705EA5800BD27FA /* CurrentWeather.swift in Sources */,
 				447D44392704A5DD00302C5B /* SettingsViewController.swift in Sources */,
 				44EE9CD12704DFB100E388AD /* MapViewController.swift in Sources */,
 				44EE9CD32704EEDB00E388AD /* LocationViewController.swift in Sources */,

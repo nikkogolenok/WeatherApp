@@ -297,7 +297,16 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="cityLabel" destination="g4o-Vs-tdI" id="mld-Yh-RQe"/>
+                        <outlet property="feelsLikeTemperatureLabel" destination="kiU-4A-QJg" id="QCq-Vn-5oe"/>
                         <outlet property="mainView" destination="EUQ-SF-lmo" id="HBo-Uw-WWV"/>
+                        <outlet property="maxTemperatureLabel" destination="oPX-Py-Cfv" id="FO2-PH-8HQ"/>
+                        <outlet property="minTemperatureLabel" destination="bzH-AX-z9R" id="mVH-WJ-Etl"/>
+                        <outlet property="pressureLabel" destination="1RP-uw-CaH" id="ht9-1a-duT"/>
+                        <outlet property="temperatureLabel" destination="PLp-Is-Ldu" id="iUG-Qi-uWG"/>
+                        <outlet property="timeLabel" destination="Cy0-Pk-wke" id="g36-0d-HzK"/>
+                        <outlet property="visibilityLabel" destination="m8p-9u-vcV" id="fjc-K5-XVk"/>
+                        <outlet property="windSpeed" destination="N3F-ut-Ict" id="cOE-jb-kdI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

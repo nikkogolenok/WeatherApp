@@ -12,8 +12,16 @@ class MainViewController: UIViewController {
     // MARK: - Variables
     
     // MARK: - Outlet
-    
     @IBOutlet weak var mainView: UIView!
+    @IBOutlet weak var cityLabel: UIButton!
+    @IBOutlet weak var temperatureLabel: UILabel!
+    @IBOutlet weak var feelsLikeTemperatureLabel: UILabel!
+    @IBOutlet weak var maxTemperatureLabel: UILabel!
+    @IBOutlet weak var minTemperatureLabel: UILabel!
+    @IBOutlet weak var pressureLabel: UILabel!
+    @IBOutlet weak var visibilityLabel: UILabel!
+    @IBOutlet weak var windSpeed: UILabel!
+    @IBOutlet weak var timeLabel: UILabel!
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
