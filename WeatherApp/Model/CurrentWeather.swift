@@ -29,9 +29,11 @@ struct CurrentWeather {
     let visibility: Int
     let windSpeed: Double
     
+    
+    
 //    init?(currentWeatherData: CurrentWeatherData) {
 //        temperature = currentWeatherData.current.temp
-//        //maxTemperature = currentWeatherData.daily.temp.max
+//        maxTemperature = currentWeatherData.daily.temp.max
 //        //minTemperature = currentWeatherData.daily.temp.min
 //        //pressure = currentWeatherData.daily.pressure
 //        visibility = currentWeatherData.current.visibility
