@@ -6,10 +6,12 @@
 //
 
 import UIKit
+import CoreLocation
 
 class MainViewController: UIViewController {
 
     // MARK: - Variables
+    private let locationManager = CLLocationManager()
     
     // MARK: - Outlet
     @IBOutlet weak var mainView: UIView!
@@ -27,7 +29,7 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        locationManager.delegate = self
         mainView.backgroundColor = .green
     }
     

@@ -18,6 +18,9 @@
 		447D44392704A5DD00302C5B /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447D44382704A5DD00302C5B /* SettingsViewController.swift */; };
 		44AA76122705287700BD27FA /* LocationViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AA76112705287700BD27FA /* LocationViewController+Extension.swift */; };
 		44AA76152705EA5800BD27FA /* CurrentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AA76142705EA5800BD27FA /* CurrentWeather.swift */; };
+		44E55C52270C4BF4009EF745 /* NetworkWeatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E55C51270C4BF4009EF745 /* NetworkWeatherManager.swift */; };
+		44E55C54270C4C49009EF745 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E55C53270C4C49009EF745 /* Constants.swift */; };
+		44E55C56270C6D66009EF745 /* MainViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E55C55270C6D66009EF745 /* MainViewController+Extension.swift */; };
 		44EE9CD12704DFB100E388AD /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44EE9CD02704DFB100E388AD /* MapViewController.swift */; };
 		44EE9CD32704EEDB00E388AD /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44EE9CD22704EEDB00E388AD /* LocationViewController.swift */; };
 /* End PBXBuildFile section */
@@ -36,6 +39,9 @@
 		447D44382704A5DD00302C5B /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		44AA76112705287700BD27FA /* LocationViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LocationViewController+Extension.swift"; sourceTree = "<group>"; };
 		44AA76142705EA5800BD27FA /* CurrentWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeather.swift; sourceTree = "<group>"; };
+		44E55C51270C4BF4009EF745 /* NetworkWeatherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkWeatherManager.swift; sourceTree = "<group>"; };
+		44E55C53270C4C49009EF745 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		44E55C55270C6D66009EF745 /* MainViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController+Extension.swift"; sourceTree = "<group>"; };
 		44EE9CD02704DFB100E388AD /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		44EE9CD22704EEDB00E388AD /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -116,6 +122,8 @@
 			children = (
 				447D443327044C5900302C5B /* CurrentWeatherData.swift */,
 				44AA76142705EA5800BD27FA /* CurrentWeather.swift */,
+				44E55C51270C4BF4009EF745 /* NetworkWeatherManager.swift */,
+				44E55C53270C4C49009EF745 /* Constants.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -125,6 +133,7 @@
 			children = (
 				447D44362704858A00302C5B /* UIView+Extension.swift */,
 				44AA76112705287700BD27FA /* LocationViewController+Extension.swift */,
+				44E55C55270C6D66009EF745 /* MainViewController+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -217,6 +226,9 @@
 				447D44392704A5DD00302C5B /* SettingsViewController.swift in Sources */,
 				44EE9CD12704DFB100E388AD /* MapViewController.swift in Sources */,
 				44EE9CD32704EEDB00E388AD /* LocationViewController.swift in Sources */,
+				44E55C52270C4BF4009EF745 /* NetworkWeatherManager.swift in Sources */,
+				44E55C54270C4C49009EF745 /* Constants.swift in Sources */,
+				44E55C56270C6D66009EF745 /* MainViewController+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
