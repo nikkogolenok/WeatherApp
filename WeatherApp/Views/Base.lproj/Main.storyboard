@@ -322,11 +322,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="m1F-eo-bNp">
-                                <rect key="frame" x="0.0" y="44" width="414" height="157"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="m1F-eo-bNp">
+                                <rect key="frame" x="10" y="54" width="394" height="218.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="204" translatesAutoresizingMaskIntoConstraints="NO" id="mSW-8c-w8S">
-                                        <rect key="frame" x="20.5" y="0.0" width="373" height="31"/>
+                                        <rect key="frame" x="10.5" y="0.0" width="373" height="31"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Температура" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z6v-AB-hew">
                                                 <rect key="frame" x="0.0" y="0.0" width="100" height="31"/>
@@ -344,7 +344,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="Hmh-2O-RMG">
-                                        <rect key="frame" x="21" y="41" width="372" height="54.5"/>
+                                        <rect key="frame" x="11" y="41" width="372" height="54.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Скорость ветра " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L8t-Ss-If8">
                                                 <rect key="frame" x="0.0" y="0.0" width="124" height="20.5"/>
@@ -352,7 +352,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="IPx-9u-1ce">
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="IPx-9u-1ce">
                                                 <rect key="frame" x="0.0" y="23.5" width="372" height="32"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="372" id="Hnv-mG-mhM"/>
@@ -368,9 +368,9 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="EqW-qj-ybk">
-                                        <rect key="frame" x="21" y="105.5" width="372" height="51.5"/>
+                                        <rect key="frame" x="11" y="105.5" width="372" height="51.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Давление" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LLF-KY-YVI">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Давление" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LLF-KY-YVI">
                                                 <rect key="frame" x="0.0" y="0.0" width="74.5" height="20.5"/>
                                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="17"/>
                                                 <nil key="textColor"/>
@@ -390,18 +390,40 @@
                                             </segmentedControl>
                                         </subviews>
                                     </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="gMt-gI-ZQC">
+                                        <rect key="frame" x="11" y="167" width="372" height="51.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Выбор языка" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5PV-1l-9hf">
+                                                <rect key="frame" x="0.0" y="0.0" width="101" height="20.5"/>
+                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="uDt-De-voH">
+                                                <rect key="frame" x="0.0" y="20.5" width="372" height="32"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="372" id="06v-QD-xyU"/>
+                                                </constraints>
+                                                <segments>
+                                                    <segment title="Английский "/>
+                                                    <segment title="Русский "/>
+                                                </segments>
+                                            </segmentedControl>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="eF8-Nw-Odf"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="m1F-eo-bNp" firstAttribute="top" secondItem="eF8-Nw-Odf" secondAttribute="top" id="iaj-76-NhN"/>
-                            <constraint firstItem="eF8-Nw-Odf" firstAttribute="trailing" secondItem="m1F-eo-bNp" secondAttribute="trailing" id="mu0-Vg-LGN"/>
-                            <constraint firstItem="m1F-eo-bNp" firstAttribute="leading" secondItem="eF8-Nw-Odf" secondAttribute="leading" id="sAK-TS-1zv"/>
+                            <constraint firstItem="m1F-eo-bNp" firstAttribute="top" secondItem="eF8-Nw-Odf" secondAttribute="top" constant="10" id="iaj-76-NhN"/>
+                            <constraint firstItem="eF8-Nw-Odf" firstAttribute="trailing" secondItem="m1F-eo-bNp" secondAttribute="trailing" constant="10" id="mu0-Vg-LGN"/>
+                            <constraint firstItem="m1F-eo-bNp" firstAttribute="leading" secondItem="eF8-Nw-Odf" secondAttribute="leading" constant="10" id="sAK-TS-1zv"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="languageSelectionSegmentedControl" destination="uDt-De-voH" id="hxy-mw-bgz"/>
                         <outlet property="pressureSegmentedControl" destination="wVd-Se-sdC" id="yU0-6b-g4w"/>
                         <outlet property="speedSegmentedControl" destination="IPx-9u-1ce" id="Y1d-U9-jFj"/>
                         <outlet property="temperatureSegmentedControl" destination="Fjb-AU-XQn" id="2Wi-RS-Zih"/>
@@ -429,10 +451,10 @@
                                 <rect key="frame" x="0.0" y="550" width="414" height="312"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="bottom" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="RDt-YH-py5">
-                                        <rect key="frame" x="20" y="104" width="374" height="104"/>
+                                        <rect key="frame" x="20" y="127.5" width="374" height="57"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="fRF-cR-LtA">
-                                                <rect key="frame" x="0.0" y="47" width="90" height="57"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="90" height="57"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M7H-JN-YnB">
                                                         <rect key="frame" x="29.5" y="0.0" width="31" height="31"/>
@@ -450,19 +472,19 @@
                                                     </label>
                                                 </subviews>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="6g5-Qg-Nep">
-                                                <rect key="frame" x="95" y="0.0" width="89.5" height="104"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="6g5-Qg-Nep">
+                                                <rect key="frame" x="95" y="0.0" width="89.5" height="57"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JsG-KH-6Qb">
-                                                        <rect key="frame" x="20.5" y="0.0" width="48" height="48"/>
+                                                        <rect key="frame" x="29" y="0.0" width="31" height="31"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="JsG-KH-6Qb" secondAttribute="height" multiplier="1:1" id="Znm-Iu-stU"/>
                                                         </constraints>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" image="car" catalog="system"/>
                                                     </button>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Прогноз осадков" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7GP-D5-9hl">
-                                                        <rect key="frame" x="15.5" y="56" width="58.5" height="48"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Осадки" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7GP-D5-9hl">
+                                                        <rect key="frame" x="21" y="39" width="47.5" height="18"/>
                                                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="15"/>
                                                         <color key="textColor" systemColor="systemOrangeColor"/>
                                                         <nil key="highlightedColor"/>
@@ -470,7 +492,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="G6L-hs-Vju">
-                                                <rect key="frame" x="189.5" y="47" width="90" height="57"/>
+                                                <rect key="frame" x="189.5" y="0.0" width="90" height="57"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Of5-vh-yBZ">
                                                         <rect key="frame" x="29.5" y="0.0" width="31" height="31"/>
@@ -489,7 +511,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Fx2-Bo-ZdT">
-                                                <rect key="frame" x="284.5" y="47" width="89.5" height="57"/>
+                                                <rect key="frame" x="284.5" y="0.0" width="89.5" height="57"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cmc-t8-3nY">
                                                         <rect key="frame" x="29" y="0.0" width="31" height="31"/>

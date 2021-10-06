@@ -13,14 +13,30 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var temperatureSegmentedControl: UISegmentedControl!
     @IBOutlet weak var speedSegmentedControl: UISegmentedControl!
     @IBOutlet weak var pressureSegmentedControl: UISegmentedControl!
+    @IBOutlet weak var languageSelectionSegmentedControl: UISegmentedControl!
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        addBarButtonItem()
     }
     
-    // MARK: - ACtion
+    // MARK: - Method
+    private func addBarButtonItem() {
+        let rightBarButton = UIBarButtonItem(title: "Готово",
+                                             style: .done,
+                                             target: self,
+                                             action: #selector(readyAction))
+        navigationItem.rightBarButtonItem = rightBarButton
+    }
+    
+    // MARK: - Action
     @IBAction func doneAction(_ sender: UIBarButtonItem) {
+        dismiss(animated: true)
+    }
+    
+    @objc func readyAction() {
         dismiss(animated: true)
     }
     

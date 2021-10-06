@@ -26,17 +26,17 @@ class LocationViewController: UIViewController {
     }
     
     private func addBarButtonsItem() {
-        let leftBarButton = UIBarButtonItem(image: UIImage(systemName: "chevron.left"),
-                                            style: .plain,
-                                            target: self,
-                                            action: #selector(goBackOnMainView))
+//        let leftBarButton = UIBarButtonItem(image: UIImage(systemName: "chevron.left"),
+//                                            style: .plain,
+//                                            target: self,
+//                                            action: #selector(goBackOnMainView))
         
         let rightBarButton = UIBarButtonItem(title: isEditMode ? "Готово" : "Править",
                                           style: .done,
                                           target: self,
                                           action: #selector(updateTableView))
         
-        navigationItem.leftBarButtonItem = leftBarButton
+        //navigationItem.leftBarButtonItem = leftBarButton
         navigationItem.rightBarButtonItem = rightBarButton
     }
     

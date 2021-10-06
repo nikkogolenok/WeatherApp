@@ -1,0 +1,141 @@
+
+/* Class = "UILabel"; text = "ЮВ ветер"; ObjectID = "0U4-JG-7N4"; */
+"0U4-JG-7N4.text" = "ЮВ ветер";
+
+/* Class = "UILabel"; text = "775мм"; ObjectID = "1RP-uw-CaH"; */
+"1RP-uw-CaH.text" = "775мм";
+
+/* Class = "UINavigationItem"; title = "Местоположение"; ObjectID = "5Ar-bT-aBQ"; */
+"5Ar-bT-aBQ.title" = "Местоположение";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "5Hb-2r-7pN"; */
+"5Hb-2r-7pN.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Выбор языка"; ObjectID = "5PV-1l-9hf"; */
+"5PV-1l-9hf.text" = "Выбор языка";
+
+/* Class = "UILabel"; text = "Осадки"; ObjectID = "7GP-D5-9hl"; */
+"7GP-D5-9hl.text" = "Осадки";
+
+/* Class = "UILabel"; text = "Спутник "; ObjectID = "BQT-K3-aK0"; */
+"BQT-K3-aK0.text" = "Спутник ";
+
+/* Class = "UILabel"; text = "15:47"; ObjectID = "Cy0-Pk-wke"; */
+"Cy0-Pk-wke.text" = "15:47";
+
+/* Class = "UISegmentedControl"; Fjb-AU-XQn.segmentTitles[0] = "°F"; ObjectID = "Fjb-AU-XQn"; */
+"Fjb-AU-XQn.segmentTitles[0]" = "°F";
+
+/* Class = "UISegmentedControl"; Fjb-AU-XQn.segmentTitles[1] = "°C"; ObjectID = "Fjb-AU-XQn"; */
+"Fjb-AU-XQn.segmentTitles[1]" = "°C";
+
+/* Class = "UISegmentedControl"; IPx-9u-1ce.segmentTitles[0] = "м/ч"; ObjectID = "IPx-9u-1ce"; */
+"IPx-9u-1ce.segmentTitles[0]" = "м/ч";
+
+/* Class = "UISegmentedControl"; IPx-9u-1ce.segmentTitles[1] = "км/ч"; ObjectID = "IPx-9u-1ce"; */
+"IPx-9u-1ce.segmentTitles[1]" = "км/ч";
+
+/* Class = "UISegmentedControl"; IPx-9u-1ce.segmentTitles[2] = "м/с"; ObjectID = "IPx-9u-1ce"; */
+"IPx-9u-1ce.segmentTitles[2]" = "м/с";
+
+/* Class = "UISegmentedControl"; IPx-9u-1ce.segmentTitles[3] = "узлы"; ObjectID = "IPx-9u-1ce"; */
+"IPx-9u-1ce.segmentTitles[3]" = "узлы";
+
+/* Class = "UISegmentedControl"; IPx-9u-1ce.segmentTitles[4] = "Бофорт"; ObjectID = "IPx-9u-1ce"; */
+"IPx-9u-1ce.segmentTitles[4]" = "Бофорт";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "JsG-KH-6Qb"; */
+"JsG-KH-6Qb.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Скорость ветра "; ObjectID = "L8t-Ss-If8"; */
+"L8t-Ss-If8.text" = "Скорость ветра ";
+
+/* Class = "UILabel"; text = "Давление"; ObjectID = "LLF-KY-YVI"; */
+"LLF-KY-YVI.text" = "Давление";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "M7H-JN-YnB"; */
+"M7H-JN-YnB.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Видимость "; ObjectID = "MMZ-6m-cTW"; */
+"MMZ-6m-cTW.text" = "Видимость ";
+
+/* Class = "UILabel"; text = "Ураган"; ObjectID = "MjP-K8-QOt"; */
+"MjP-K8-QOt.text" = "Ураган";
+
+/* Class = "UILabel"; text = "15км/ч"; ObjectID = "N3F-ut-Ict"; */
+"N3F-ut-Ict.text" = "15км/ч";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Of5-vh-yBZ"; */
+"Of5-vh-yBZ.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "10°"; ObjectID = "PLp-Is-Ldu"; */
+"PLp-Is-Ldu.text" = "10°";
+
+/* Class = "UILabel"; text = "Радар "; ObjectID = "R54-ql-1YE"; */
+"R54-ql-1YE.text" = "Радар ";
+
+/* Class = "UILabel"; text = "Сплошная облачность "; ObjectID = "Tg0-MZ-A8N"; */
+"Tg0-MZ-A8N.text" = "Сплошная облачность ";
+
+/* Class = "UILabel"; text = "Мин"; ObjectID = "TnV-qL-8rW"; */
+"TnV-qL-8rW.text" = "Мин";
+
+/* Class = "UILabel"; text = "Давление"; ObjectID = "YSN-Ax-k36"; */
+"YSN-Ax-k36.text" = "Давление";
+
+/* Class = "UILabel"; text = "Температура"; ObjectID = "Z6v-AB-hew"; */
+"Z6v-AB-hew.text" = "Температура";
+
+/* Class = "UILabel"; text = "11°"; ObjectID = "bzH-AX-z9R"; */
+"bzH-AX-z9R.text" = "11°";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "cVd-tq-fdD"; */
+"cVd-tq-fdD.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "cmc-t8-3nY"; */
+"cmc-t8-3nY.normalTitle" = "Button";
+
+/* Class = "UIButton"; configuration.title = "Минск"; ObjectID = "g4o-Vs-tdI"; */
+"g4o-Vs-tdI.configuration.title" = "Минск";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "g4o-Vs-tdI"; */
+"g4o-Vs-tdI.normalTitle" = "Button";
+
+/* Class = "UINavigationItem"; title = "Прогноз осадков"; ObjectID = "hJe-Bx-6hY"; */
+"hJe-Bx-6hY.title" = "Прогноз осадков";
+
+/* Class = "UILabel"; text = "8°"; ObjectID = "kiU-4A-QJg"; */
+"kiU-4A-QJg.text" = "8°";
+
+/* Class = "UILabel"; text = "48.5км"; ObjectID = "m8p-9u-vcV"; */
+"m8p-9u-vcV.text" = "48.5км";
+
+/* Class = "UILabel"; text = "11°"; ObjectID = "oPX-Py-Cfv"; */
+"oPX-Py-Cfv.text" = "11°";
+
+/* Class = "UILabel"; text = "По ощущениям "; ObjectID = "ptk-GF-fqh"; */
+"ptk-GF-fqh.text" = "По ощущениям ";
+
+/* Class = "UILabel"; text = "CP"; ObjectID = "rzq-Qa-nA8"; */
+"rzq-Qa-nA8.text" = "CP";
+
+/* Class = "UISegmentedControl"; uDt-De-voH.segmentTitles[0] = "Английский "; ObjectID = "uDt-De-voH"; */
+"uDt-De-voH.segmentTitles[0]" = "Английский ";
+
+/* Class = "UISegmentedControl"; uDt-De-voH.segmentTitles[1] = "Русский "; ObjectID = "uDt-De-voH"; */
+"uDt-De-voH.segmentTitles[1]" = "Русский ";
+
+/* Class = "UILabel"; text = "Макс"; ObjectID = "uN7-3o-tpi"; */
+"uN7-3o-tpi.text" = "Макс";
+
+/* Class = "UISegmentedControl"; wVd-Se-sdC.segmentTitles[0] = "дюймы"; ObjectID = "wVd-Se-sdC"; */
+"wVd-Se-sdC.segmentTitles[0]" = "дюймы";
+
+/* Class = "UISegmentedControl"; wVd-Se-sdC.segmentTitles[1] = "мм"; ObjectID = "wVd-Se-sdC"; */
+"wVd-Se-sdC.segmentTitles[1]" = "мм";
+
+/* Class = "UISegmentedControl"; wVd-Se-sdC.segmentTitles[2] = "kPa"; ObjectID = "wVd-Se-sdC"; */
+"wVd-Se-sdC.segmentTitles[2]" = "kPa";
+
+/* Class = "UISegmentedControl"; wVd-Se-sdC.segmentTitles[3] = "мбар"; ObjectID = "wVd-Se-sdC"; */
+"wVd-Se-sdC.segmentTitles[3]" = "мбар";
