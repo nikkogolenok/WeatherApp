@@ -266,9 +266,17 @@
                                             </stackView>
                                         </subviews>
                                     </stackView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="a2b-1Z-4ht">
+                                        <rect key="frame" x="95.5" y="116" width="174" height="174"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="a2b-1Z-4ht" secondAttribute="height" multiplier="1:1" id="g0V-9D-85p"/>
+                                        </constraints>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
+                                    <constraint firstItem="oW7-m6-RaI" firstAttribute="top" secondItem="a2b-1Z-4ht" secondAttribute="bottom" constant="20" id="38x-k4-QPf"/>
+                                    <constraint firstItem="a2b-1Z-4ht" firstAttribute="leading" secondItem="HP4-MF-1fV" secondAttribute="trailing" constant="20" id="6je-VG-3dn"/>
                                     <constraint firstItem="HP4-MF-1fV" firstAttribute="top" secondItem="EUQ-SF-lmo" secondAttribute="top" constant="160" id="73i-eb-Dg3"/>
                                     <constraint firstAttribute="bottom" secondItem="oW7-m6-RaI" secondAttribute="bottom" constant="25" id="9sD-qm-StA"/>
                                     <constraint firstItem="eM4-7h-MVQ" firstAttribute="top" secondItem="EUQ-SF-lmo" secondAttribute="top" constant="160" id="F4D-uG-rKV"/>
@@ -277,6 +285,7 @@
                                     <constraint firstItem="HP4-MF-1fV" firstAttribute="leading" secondItem="EUQ-SF-lmo" secondAttribute="leading" constant="25" id="jSt-jU-FhA"/>
                                     <constraint firstItem="6vF-M5-CV2" firstAttribute="centerX" secondItem="EUQ-SF-lmo" secondAttribute="centerX" id="ldh-qQ-szn"/>
                                     <constraint firstItem="oW7-m6-RaI" firstAttribute="centerX" secondItem="EUQ-SF-lmo" secondAttribute="centerX" id="oNc-Aa-maR"/>
+                                    <constraint firstItem="a2b-1Z-4ht" firstAttribute="top" secondItem="6vF-M5-CV2" secondAttribute="bottom" constant="20" id="ww5-5I-Zhl"/>
                                     <constraint firstItem="6vF-M5-CV2" firstAttribute="top" secondItem="EUQ-SF-lmo" secondAttribute="top" constant="25" id="xbO-Zl-urT"/>
                                 </constraints>
                             </view>
