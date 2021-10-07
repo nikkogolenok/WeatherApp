@@ -15,6 +15,11 @@ struct CurrentWeather {
         return String(format: "%.0f", temperature)
     }
     
+    let feelLikeTemperature: Double
+    var feelLikeTemperatureString: String {
+        return String(format: "%.0f", feelLikeTemperature)
+    }
+    
     let maxTemperature: Double
     var maxTemperatureString: String {
         return String(format: "%.0f", maxTemperature)
@@ -31,12 +36,14 @@ struct CurrentWeather {
     
     
     
-//    init?(currentWeatherData: CurrentWeatherData) {
-//        temperature = currentWeatherData.current.temp
-//        maxTemperature = currentWeatherData.daily.temp.max
-//        //minTemperature = currentWeatherData.daily.temp.min
-//        //pressure = currentWeatherData.daily.pressure
-//        visibility = currentWeatherData.current.visibility
-//        windSpeed = currentWeatherData.current.windSpeed
-//    }
+    init?(currentWeatherData: CurrentWeatherData) {
+        cityName = currentWeatherData.name
+        temperature = currentWeatherData.main.temp
+        feelLikeTemperature = currentWeatherData.main.feelsLike
+        maxTemperature = currentWeatherData.main.tempMax
+        minTemperature = currentWeatherData.main.tempMin
+        pressure = currentWeatherData.main.pressure
+        visibility = currentWeatherData.visibility
+        windSpeed = currentWeatherData.wind.speed
+    }
 }
