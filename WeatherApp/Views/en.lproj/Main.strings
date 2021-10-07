@@ -1,24 +1,24 @@
 
 /* Class = "UILabel"; text = "ЮВ ветер"; ObjectID = "0U4-JG-7N4"; */
-"0U4-JG-7N4.text" = "ЮВ ветер";
+"0U4-JG-7N4.text" = "SE wind ";
 
 /* Class = "UILabel"; text = "775мм"; ObjectID = "1RP-uw-CaH"; */
-"1RP-uw-CaH.text" = "775мм";
+"1RP-uw-CaH.text" = "775mm";
 
 /* Class = "UINavigationItem"; title = "Местоположение"; ObjectID = "5Ar-bT-aBQ"; */
-"5Ar-bT-aBQ.title" = "Местоположение";
+"5Ar-bT-aBQ.title" = "Location";
 
 /* Class = "UIButton"; normalTitle = "Button"; ObjectID = "5Hb-2r-7pN"; */
 "5Hb-2r-7pN.normalTitle" = "Button";
 
 /* Class = "UILabel"; text = "Выбор языка"; ObjectID = "5PV-1l-9hf"; */
-"5PV-1l-9hf.text" = "Выбор языка";
+"5PV-1l-9hf.text" = "Language selection";
 
 /* Class = "UILabel"; text = "Осадки"; ObjectID = "7GP-D5-9hl"; */
-"7GP-D5-9hl.text" = "Осадки";
+"7GP-D5-9hl.text" = "Precipitation";
 
 /* Class = "UILabel"; text = "Спутник "; ObjectID = "BQT-K3-aK0"; */
-"BQT-K3-aK0.text" = "Спутник ";
+"BQT-K3-aK0.text" = "Satellite";
 
 /* Class = "UILabel"; text = "15:47"; ObjectID = "Cy0-Pk-wke"; */
 "Cy0-Pk-wke.text" = "15:47";
@@ -30,40 +30,40 @@
 "Fjb-AU-XQn.segmentTitles[1]" = "°C";
 
 /* Class = "UISegmentedControl"; IPx-9u-1ce.segmentTitles[0] = "м/ч"; ObjectID = "IPx-9u-1ce"; */
-"IPx-9u-1ce.segmentTitles[0]" = "м/ч";
+"IPx-9u-1ce.segmentTitles[0]" = "m/h";
 
 /* Class = "UISegmentedControl"; IPx-9u-1ce.segmentTitles[1] = "км/ч"; ObjectID = "IPx-9u-1ce"; */
-"IPx-9u-1ce.segmentTitles[1]" = "км/ч";
+"IPx-9u-1ce.segmentTitles[1]" = "km/h";
 
 /* Class = "UISegmentedControl"; IPx-9u-1ce.segmentTitles[2] = "м/с"; ObjectID = "IPx-9u-1ce"; */
-"IPx-9u-1ce.segmentTitles[2]" = "м/с";
+"IPx-9u-1ce.segmentTitles[2]" = "m/c";
 
 /* Class = "UISegmentedControl"; IPx-9u-1ce.segmentTitles[3] = "узлы"; ObjectID = "IPx-9u-1ce"; */
-"IPx-9u-1ce.segmentTitles[3]" = "узлы";
+"IPx-9u-1ce.segmentTitles[3]" = "knots";
 
 /* Class = "UISegmentedControl"; IPx-9u-1ce.segmentTitles[4] = "Бофорт"; ObjectID = "IPx-9u-1ce"; */
-"IPx-9u-1ce.segmentTitles[4]" = "Бофорт";
+"IPx-9u-1ce.segmentTitles[4]" = "Beaufort";
 
 /* Class = "UIButton"; normalTitle = "Button"; ObjectID = "JsG-KH-6Qb"; */
 "JsG-KH-6Qb.normalTitle" = "Button";
 
 /* Class = "UILabel"; text = "Скорость ветра "; ObjectID = "L8t-Ss-If8"; */
-"L8t-Ss-If8.text" = "Скорость ветра ";
+"L8t-Ss-If8.text" = "Speed wind ";
 
 /* Class = "UILabel"; text = "Давление"; ObjectID = "LLF-KY-YVI"; */
-"LLF-KY-YVI.text" = "Давление";
+"LLF-KY-YVI.text" = "Pressure";
 
 /* Class = "UIButton"; normalTitle = "Button"; ObjectID = "M7H-JN-YnB"; */
 "M7H-JN-YnB.normalTitle" = "Button";
 
 /* Class = "UILabel"; text = "Видимость "; ObjectID = "MMZ-6m-cTW"; */
-"MMZ-6m-cTW.text" = "Видимость ";
+"MMZ-6m-cTW.text" = "Visibility ";
 
 /* Class = "UILabel"; text = "Ураган"; ObjectID = "MjP-K8-QOt"; */
-"MjP-K8-QOt.text" = "Ураган";
+"MjP-K8-QOt.text" = "Hurricane";
 
 /* Class = "UILabel"; text = "15км/ч"; ObjectID = "N3F-ut-Ict"; */
-"N3F-ut-Ict.text" = "15км/ч";
+"N3F-ut-Ict.text" = "15km/h";
 
 /* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Of5-vh-yBZ"; */
 "Of5-vh-yBZ.normalTitle" = "Button";
@@ -72,19 +72,19 @@
 "PLp-Is-Ldu.text" = "10°";
 
 /* Class = "UILabel"; text = "Радар "; ObjectID = "R54-ql-1YE"; */
-"R54-ql-1YE.text" = "Радар ";
+"R54-ql-1YE.text" = "Radar ";
 
 /* Class = "UILabel"; text = "Сплошная облачность "; ObjectID = "Tg0-MZ-A8N"; */
-"Tg0-MZ-A8N.text" = "Сплошная облачность ";
+"Tg0-MZ-A8N.text" = "Overcast ";
 
 /* Class = "UILabel"; text = "Мин"; ObjectID = "TnV-qL-8rW"; */
-"TnV-qL-8rW.text" = "Мин";
+"TnV-qL-8rW.text" = "Min";
 
 /* Class = "UILabel"; text = "Давление"; ObjectID = "YSN-Ax-k36"; */
-"YSN-Ax-k36.text" = "Давление";
+"YSN-Ax-k36.text" = "Pressure";
 
 /* Class = "UILabel"; text = "Температура"; ObjectID = "Z6v-AB-hew"; */
-"Z6v-AB-hew.text" = "Температура";
+"Z6v-AB-hew.text" = "Temperature";
 
 /* Class = "UILabel"; text = "11°"; ObjectID = "bzH-AX-z9R"; */
 "bzH-AX-z9R.text" = "11°";
@@ -96,46 +96,46 @@
 "cmc-t8-3nY.normalTitle" = "Button";
 
 /* Class = "UIButton"; configuration.title = "Минск"; ObjectID = "g4o-Vs-tdI"; */
-"g4o-Vs-tdI.configuration.title" = "Минск";
+"g4o-Vs-tdI.configuration.title" = "Minsk";
 
 /* Class = "UIButton"; normalTitle = "Button"; ObjectID = "g4o-Vs-tdI"; */
 "g4o-Vs-tdI.normalTitle" = "Button";
 
 /* Class = "UINavigationItem"; title = "Прогноз осадков"; ObjectID = "hJe-Bx-6hY"; */
-"hJe-Bx-6hY.title" = "Прогноз осадков";
+"hJe-Bx-6hY.title" = "Precipitation forecast";
 
 /* Class = "UILabel"; text = "8°"; ObjectID = "kiU-4A-QJg"; */
 "kiU-4A-QJg.text" = "8°";
 
 /* Class = "UILabel"; text = "48.5км"; ObjectID = "m8p-9u-vcV"; */
-"m8p-9u-vcV.text" = "48.5км";
+"m8p-9u-vcV.text" = "48.5km";
 
 /* Class = "UILabel"; text = "11°"; ObjectID = "oPX-Py-Cfv"; */
 "oPX-Py-Cfv.text" = "11°";
 
 /* Class = "UILabel"; text = "По ощущениям "; ObjectID = "ptk-GF-fqh"; */
-"ptk-GF-fqh.text" = "По ощущениям ";
+"ptk-GF-fqh.text" = "Feels like ";
 
 /* Class = "UILabel"; text = "CP"; ObjectID = "rzq-Qa-nA8"; */
 "rzq-Qa-nA8.text" = "CP";
 
 /* Class = "UISegmentedControl"; uDt-De-voH.segmentTitles[0] = "Английский "; ObjectID = "uDt-De-voH"; */
-"uDt-De-voH.segmentTitles[0]" = "Английский ";
+"uDt-De-voH.segmentTitles[0]" = "English ";
 
 /* Class = "UISegmentedControl"; uDt-De-voH.segmentTitles[1] = "Русский "; ObjectID = "uDt-De-voH"; */
-"uDt-De-voH.segmentTitles[1]" = "Русский ";
+"uDt-De-voH.segmentTitles[1]" = "Russian ";
 
 /* Class = "UILabel"; text = "Макс"; ObjectID = "uN7-3o-tpi"; */
 "uN7-3o-tpi.text" = "Макс";
 
 /* Class = "UISegmentedControl"; wVd-Se-sdC.segmentTitles[0] = "дюймы"; ObjectID = "wVd-Se-sdC"; */
-"wVd-Se-sdC.segmentTitles[0]" = "дюймы";
+"wVd-Se-sdC.segmentTitles[0]" = "inches";
 
 /* Class = "UISegmentedControl"; wVd-Se-sdC.segmentTitles[1] = "мм"; ObjectID = "wVd-Se-sdC"; */
-"wVd-Se-sdC.segmentTitles[1]" = "мм";
+"wVd-Se-sdC.segmentTitles[1]" = "mm";
 
 /* Class = "UISegmentedControl"; wVd-Se-sdC.segmentTitles[2] = "kPa"; ObjectID = "wVd-Se-sdC"; */
 "wVd-Se-sdC.segmentTitles[2]" = "kPa";
 
 /* Class = "UISegmentedControl"; wVd-Se-sdC.segmentTitles[3] = "мбар"; ObjectID = "wVd-Se-sdC"; */
-"wVd-Se-sdC.segmentTitles[3]" = "мбар";
+"wVd-Se-sdC.segmentTitles[3]" = "mbar";
