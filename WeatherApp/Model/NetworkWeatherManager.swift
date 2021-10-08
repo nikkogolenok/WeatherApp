@@ -25,6 +25,7 @@ class NetworkWeatherManager {
         case .coordinate(let latitude, let longitude):
             urlString = "https://api.openweathermap.org/data/2.5/onecall?lat=\(latitude)&lon=\(longitude)&exclude={part}&appid=\(apiKey)&units=metric"
         }
+        performRequest(withURLString: urlString)
     }
     
     fileprivate func performRequest(withURLString urlString: String) {
