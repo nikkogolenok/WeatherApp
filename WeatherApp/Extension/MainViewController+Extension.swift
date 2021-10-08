@@ -17,9 +17,10 @@ extension MainViewController: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let location = locations.last {
-            let annotation = MKPointAnnotation()
-            annotation.coordinate = CLLocationCoordinate2D(latitude: location.coordinate.latitude,
-                                                           longitude: location.coordinate.longitude)
+            let latitude = location.coordinate.latitude
+            let longitude = location.coordinate.longitude
+            
+            networkWeatherManager.fetchCurrentWeather(forRequestType: .coordinate(latitude: latitude, longitude: longitude))
         }
     }
     

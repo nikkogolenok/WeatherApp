@@ -51,7 +51,8 @@ struct Main: Codable {
         case feelsLike = "feels_like"
         case tempMin = "temp_min"
         case tempMax = "temp_max"
-        case pressure, humidity
+        case pressure
+        case humidity
         case seaLevel = "sea_level"
         case grndLevel = "grnd_level"
     }

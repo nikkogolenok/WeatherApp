@@ -266,26 +266,26 @@
                                             </stackView>
                                         </subviews>
                                     </stackView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="a2b-1Z-4ht">
-                                        <rect key="frame" x="95.5" y="116" width="174" height="174"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calendar" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Yb8-s9-cJS">
+                                        <rect key="frame" x="152" y="153" width="100" height="97.5"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" secondItem="a2b-1Z-4ht" secondAttribute="height" multiplier="1:1" id="g0V-9D-85p"/>
+                                            <constraint firstAttribute="width" constant="100" id="6aT-8A-DYE"/>
+                                            <constraint firstAttribute="height" constant="100" id="8HV-vG-dmH"/>
                                         </constraints>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstItem="oW7-m6-RaI" firstAttribute="top" secondItem="a2b-1Z-4ht" secondAttribute="bottom" constant="20" id="38x-k4-QPf"/>
-                                    <constraint firstItem="a2b-1Z-4ht" firstAttribute="leading" secondItem="HP4-MF-1fV" secondAttribute="trailing" constant="20" id="6je-VG-3dn"/>
                                     <constraint firstItem="HP4-MF-1fV" firstAttribute="top" secondItem="EUQ-SF-lmo" secondAttribute="top" constant="160" id="73i-eb-Dg3"/>
                                     <constraint firstAttribute="bottom" secondItem="oW7-m6-RaI" secondAttribute="bottom" constant="25" id="9sD-qm-StA"/>
+                                    <constraint firstItem="Yb8-s9-cJS" firstAttribute="centerY" secondItem="EUQ-SF-lmo" secondAttribute="centerY" id="DKF-eb-KhO"/>
                                     <constraint firstItem="eM4-7h-MVQ" firstAttribute="top" secondItem="EUQ-SF-lmo" secondAttribute="top" constant="160" id="F4D-uG-rKV"/>
                                     <constraint firstAttribute="width" secondItem="EUQ-SF-lmo" secondAttribute="height" multiplier="1:1" id="HCs-Rl-Oby"/>
                                     <constraint firstAttribute="trailing" secondItem="eM4-7h-MVQ" secondAttribute="trailing" constant="25" id="ZFY-Ee-yVs"/>
+                                    <constraint firstItem="Yb8-s9-cJS" firstAttribute="centerX" secondItem="EUQ-SF-lmo" secondAttribute="centerX" id="cpo-Sa-Toh"/>
                                     <constraint firstItem="HP4-MF-1fV" firstAttribute="leading" secondItem="EUQ-SF-lmo" secondAttribute="leading" constant="25" id="jSt-jU-FhA"/>
                                     <constraint firstItem="6vF-M5-CV2" firstAttribute="centerX" secondItem="EUQ-SF-lmo" secondAttribute="centerX" id="ldh-qQ-szn"/>
                                     <constraint firstItem="oW7-m6-RaI" firstAttribute="centerX" secondItem="EUQ-SF-lmo" secondAttribute="centerX" id="oNc-Aa-maR"/>
-                                    <constraint firstItem="a2b-1Z-4ht" firstAttribute="top" secondItem="6vF-M5-CV2" secondAttribute="bottom" constant="20" id="ww5-5I-Zhl"/>
                                     <constraint firstItem="6vF-M5-CV2" firstAttribute="top" secondItem="EUQ-SF-lmo" secondAttribute="top" constant="25" id="xbO-Zl-urT"/>
                                 </constraints>
                             </view>
@@ -309,6 +309,7 @@
                     <connections>
                         <outlet property="cityLabel" destination="g4o-Vs-tdI" id="mld-Yh-RQe"/>
                         <outlet property="feelsLikeTemperatureLabel" destination="kiU-4A-QJg" id="QCq-Vn-5oe"/>
+                        <outlet property="imageIconForWeater" destination="Yb8-s9-cJS" id="Fg8-Nc-d8H"/>
                         <outlet property="mainView" destination="EUQ-SF-lmo" id="HBo-Uw-WWV"/>
                         <outlet property="maxTemperatureLabel" destination="oPX-Py-Cfv" id="FO2-PH-8HQ"/>
                         <outlet property="minTemperatureLabel" destination="bzH-AX-z9R" id="mVH-WJ-Etl"/>
@@ -601,6 +602,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="calendar" catalog="system" width="128" height="106"/>
         <image name="car" catalog="system" width="128" height="93"/>
         <image name="gearshape" catalog="system" width="128" height="121"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
