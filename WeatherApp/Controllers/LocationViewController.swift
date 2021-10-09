@@ -30,7 +30,7 @@ class LocationViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
-        print("Hi")
+        print("Hello")
     }
     
     private func addBarButtonsItem() {
