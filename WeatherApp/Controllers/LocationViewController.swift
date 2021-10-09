@@ -14,6 +14,8 @@ class LocationViewController: UIViewController {
     
     // MARK: - Outlet
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var searchLocationLabel: UILabel!
+    
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -23,6 +25,12 @@ class LocationViewController: UIViewController {
         tableView.dataSource = self
         
         addBarButtonsItem()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        print("Hi")
     }
     
     private func addBarButtonsItem() {
