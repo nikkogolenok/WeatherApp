@@ -38,15 +38,6 @@ class MainViewController: UIViewController {
             DispatchQueue.main.async {
                 self.updateInterfaceWith(weather: currentWeather)
             }
-            
-            print(currentWeather.cityName)
-            print(currentWeather.temperature)
-            print(currentWeather.conditionCode)
-            print(currentWeather.maxTemperature)
-            print(currentWeather.minTemperature)
-            print(currentWeather.feelLikeTemperature)
-            print(currentWeather.visibility)
-            print(currentWeather.pressure)
         }
         //networkWeatherManager.fetchCurrentWeather(forRequestType: ))
         
@@ -60,12 +51,6 @@ class MainViewController: UIViewController {
         if status == .authorizedWhenInUse || status == .authorizedAlways {
             locationManager.requestLocation()
         }
-        
-        
-        
-       
-        
-        
     }
     
     // MARK: viewDidLayoutSubviews
