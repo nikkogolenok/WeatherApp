@@ -11,13 +11,7 @@ import CoreLocation
 class MainViewController: UIViewController {
 
     // MARK: - Variables
-    lazy var locationManager: CLLocationManager = {
-        let locationManager = CLLocationManager()
-        locationManager.delegate = self
-        locationManager.desiredAccuracy = kCLLocationAccuracyKilometer
-        return locationManager
-    }()
-    
+    let locationManager = CLLocationManager()
     var networkWeatherManager = NetworkWeatherManager()
     
     // MARK: - Outlet
@@ -40,21 +34,23 @@ class MainViewController: UIViewController {
         
         networkWeatherManager.onCompletion = { [weak self] currentWeather in
             guard let self = self else { return }
-            self.updateInterfaceWith(weather: currentWeather)
             
-            print(currentWeather.cityName)
-            print(currentWeather.temperature)
-            print(currentWeather.conditionCode)
-            print(currentWeather.maxTemperature)
-            print(currentWeather.minTemperature)
-            print(currentWeather.feelLikeTemperature)
-            print(currentWeather.visibility)
-            print(currentWeather.pressure)
+            DispatchQueue.main.async {
+                self.updateInterfaceWith(weather: currentWeather)
+            }
         }
-        //networkWeatherManager.fetchCurrentWeather(forRequestType: .cityName(city: cityLabel))
+        //networkWeatherManager.fetchCurrentWeather(forRequestType: ))
         
         
         mainView.backgroundColor = .green
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyKilometer
+        
+        locationManager.requestAlwaysAuthorization()
+        let status = locationManager.authorizationStatus
+        if status == .authorizedWhenInUse || status == .authorizedAlways {
+            locationManager.requestLocation()
+        }
     }
     
     // MARK: viewDidLayoutSubviews
@@ -80,16 +76,13 @@ class MainViewController: UIViewController {
     
     // MARK: - Methods
     private func updateInterfaceWith(weather: CurrentWeather) {
-        
-        DispatchQueue.main.async {
-            self.temperatureLabel.text = weather.temperatureString
-            self.feelsLikeTemperatureLabel.text = weather.feelLikeTemperatureString
-            self.maxTemperatureLabel.text = weather.maxTemperatureString
-            self.minTemperatureLabel.text = weather.minTemperatureString
-            self.pressureLabel.text = String(weather.pressure)
-            self.visibilityLabel.text = String(weather.visibility)
-            self.imageIconForWeater.image = UIImage(systemName: weather.systemIconNameString)
-        }
+        self.temperatureLabel.text = weather.temperatureString
+        self.feelsLikeTemperatureLabel.text = weather.feelLikeTemperatureString
+        self.maxTemperatureLabel.text = weather.maxTemperatureString
+        self.minTemperatureLabel.text = weather.minTemperatureString
+        self.pressureLabel.text = String(weather.pressure)
+        self.visibilityLabel.text = String(weather.visibility)
+        self.imageIconForWeater.image = UIImage(systemName: weather.systemIconNameString)
     }
     // MARK: - Actions
     @IBAction func goToMapVC(_ sender: UIButton) {
