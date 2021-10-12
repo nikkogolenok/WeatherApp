@@ -10,47 +10,30 @@ import CoreLocation
 
 class NetworkWeatherManager {
     
-    let urlCity = "https://api.openweathermap.org/data/2.5/weather?q=Minsk&apikey=\(apiKey)&units=metric"
-    let urlCoordinate = "https://api.openweathermap.org/data/2.5/onecall?lat=30&lon=90&appid=\(apiKey)&units=metric"
+    class UrlParameters {
+        static let city = "{city}"
+        static let latitude = "{lat}"
+        static let longitude = "{lon}"
+    }
     
-    enum RequestType {
-        case cityName(city: String)
-        case coordinate(latitude: CLLocationDegrees, longitude: CLLocationDegrees)
+    class Urls {
+        static let urlCity = "https://api.openweathermap.org/data/2.5/weather?q=\(UrlParameters.city)&apikey=\(apiKey)&units=metric"
+        static let urlCoordinate = "https://api.openweathermap.org/data/2.5/onecall?lat=\(UrlParameters.latitude)&lon=\(UrlParameters.longitude)&appid=\(apiKey)&units=metric"
     }
     
     var onCompletion: ((CurrentWeather) -> Void)?
     
-    func fetchCurrentWeather(forRequestType requestType: RequestType) {
-        //var urlString = ""
-        switch requestType {
-        case .cityName(let city):
-            //urlString = "https://api.openweathermap.org/data/2.5/weather?q=\(city)&apikey=\(apiKey)&units=metric"
-            
-            self.cityRequest(city: urlCity)
-        
-        case .coordinate(let latitude, let longitude):
-            //urlString = "https://api.openweathermap.org/data/2.5/onecall?lat=\(latitude)&lon=\(longitude)&appid=\(apiKey)&units=metric"
-            
-            self.coordinateRequest(coordinate: urlCoordinate)
-            
-        }
-        //performRequest(withURLString: urlString)
-    }
-    
-//    fileprivate func performRequest(withURLString urlString: String) {
-//        guard let url = URL(string: urlString) else { return }
-//
-//        let session = URLSession(configuration: .default)
-//        let task = session.dataTask(with: url) { data, response, error in
-//            if let data = data {
-//                if let currentWeather = self.parseJSON(withData: data) {
-//                    self.onCompletion?(currentWeather)
-//                }
-//            }
+//    func fetchCurrentWeather(forRequestType requestType: Urls) {
+//        switch requestType {
+//        case Urls.urlCity:
+//            self.cityRequest(city: urlCity)
+//        case UrlParameters.latitude:
+//            self.coordinateRequest(latitude: <#T##Double#>, longitude: <#T##Double#>)
+//        case UrlParameters.longitude:
+//            print("lon")
 //        }
-//        task.resume()
 //    }
-    
+        
     func parseJSON(withData data: Data) -> CurrentWeather? {
         let decoder = JSONDecoder()
         
@@ -66,7 +49,8 @@ class NetworkWeatherManager {
     }
     
     private func cityRequest(city: String) {
-        guard let url = URL(string: urlCity) else { return }
+        let cityUrlString = Urls.urlCity.replacingOccurrences(of: UrlParameters.city, with: city)
+        guard let url = URL(string: cityUrlString) else { return }
         
         let session = URLSession(configuration: .default)
         let task = session.dataTask(with: url) { data, response, error in
@@ -79,8 +63,12 @@ class NetworkWeatherManager {
         task.resume()
     }
     
-    private func coordinateRequest(coordinate: String) {
-        guard let url = URL(string: urlCoordinate) else { return }
+    private func coordinateRequest(latitude: Double, longitude: Double) {
+        let coordinateUrlString = Urls.urlCoordinate
+            .replacingOccurrences(of: UrlParameters.latitude, with: String(latitude))
+            .replacingOccurrences(of: UrlParameters.longitude, with: String(longitude))
+        
+        guard let url = URL(string: coordinateUrlString) else { return }
         
         let session = URLSession(configuration: .default)
         let task = session.dataTask(with: url) { data, response, error in
