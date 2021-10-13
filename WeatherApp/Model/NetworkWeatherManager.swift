@@ -21,6 +21,10 @@ class NetworkWeatherManager {
         static let urlCoordinate = "https://api.openweathermap.org/data/2.5/onecall?lat=\(UrlParameters.latitude)&lon=\(UrlParameters.longitude)&appid=\(apiKey)&units=metric"
     }
     
+    enum RequestType {
+        case cityName(city: String)
+        case coordinate(latitude: CLLocationDegrees, longitude: CLLocationDegrees)
+    }
     var onCompletion: ((CurrentWeather) -> Void)?
     
 //    func fetchCurrentWeather(forRequestType requestType: Urls) {
