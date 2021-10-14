@@ -25,18 +25,17 @@ class NetworkWeatherManager {
         case cityName(city: String)
         case coordinate(latitude: CLLocationDegrees, longitude: CLLocationDegrees)
     }
+    
     var onCompletion: ((CurrentWeather) -> Void)?
     
-//    func fetchCurrentWeather(forRequestType requestType: Urls) {
-//        switch requestType {
-//        case Urls.urlCity:
-//            self.cityRequest(city: urlCity)
-//        case UrlParameters.latitude:
-//            self.coordinateRequest(latitude: <#T##Double#>, longitude: <#T##Double#>)
-//        case UrlParameters.longitude:
-//            print("lon")
-//        }
-//    }
+    func fetchCurrentWeather(forRequestType requestType: RequestType) {
+        switch requestType {
+        case .cityName(let city):
+            self.cityRequest(city: city)
+        case .coordinate(let latitude, let longitude):
+            self.coordinateRequest(latitude: latitude, longitude: longitude)
+        }
+    }
         
     func parseJSON(withData data: Data) -> CurrentWeather? {
         let decoder = JSONDecoder()
