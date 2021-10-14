@@ -84,4 +84,8 @@ class NetworkWeatherManager {
         }
         task.resume()
     }
+    
+    private func createUrl(url: String) {
+        
+    }
 }
