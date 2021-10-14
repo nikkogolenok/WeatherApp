@@ -34,8 +34,6 @@ class NetworkWeatherManager {
             self.cityRequest(city: city)
         case .coordinate(let latitude, let longitude):
             self.coordinateRequest(latitude: latitude, longitude: longitude)
-
-
         }
     }
         

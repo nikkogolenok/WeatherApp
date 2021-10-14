@@ -37,6 +37,8 @@ class MainViewController: UIViewController {
             
             DispatchQueue.main.async {
                 self.updateInterfaceWith(weather: currentWeather)
+                print(currentWeather.maxTemperature)
+                print(currentWeather.minTemperature)
             }
         }
         //networkWeatherManager.fetchCurrentWeather(forRequestType: ))
