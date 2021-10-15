@@ -65,7 +65,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wUf-AB-Elc">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="8c8fc9e095026e2c53042399ddcb9e9e" translatesAutoresizingMaskIntoConstraints="NO" id="wUf-AB-Elc">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="xIX-GG-xJI">
@@ -77,7 +77,9 @@
                                             <constraint firstAttribute="width" secondItem="cVd-tq-fdD" secondAttribute="height" multiplier="1:1" id="yjO-Pa-w2w"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="network" catalog="system"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="network" catalog="system">
+                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
                                         <connections>
                                             <action selector="goToMapVC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="unO-cJ-Vkv"/>
                                         </connections>
@@ -87,6 +89,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="magnifyingglass" catalog="system" title="Минск">
                                             <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="20"/>
+                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="goToSearchVC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vM0-6z-4PC"/>
@@ -98,7 +101,10 @@
                                             <constraint firstAttribute="width" secondItem="5Hb-2r-7pN" secondAttribute="height" multiplier="1:1" id="6dI-C5-Rve"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="gearshape" catalog="system"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="gearshape" catalog="system">
+                                            <backgroundConfiguration key="background"/>
+                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
                                         <connections>
                                             <action selector="goToSettingsVC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nOA-O5-n1q"/>
                                         </connections>
@@ -307,6 +313,44 @@
                                     <constraint firstItem="6vF-M5-CV2" firstAttribute="top" secondItem="EUQ-SF-lmo" secondAttribute="top" constant="25" id="xbO-Zl-urT"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fbG-GV-3kb">
+                                <rect key="frame" x="5" y="747" width="404" height="115"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="XNr-cf-Mhd">
+                                        <rect key="frame" x="0.0" y="0.0" width="404" height="115"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mni-gH-deu">
+                                                <rect key="frame" x="0.0" y="0.0" width="404" height="50"/>
+                                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EG8-TT-lSs">
+                                                <rect key="frame" x="0.0" y="50" width="404" height="2"/>
+                                                <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="2" id="OHv-NB-NFR"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rw3-hd-Q7v">
+                                                <rect key="frame" x="0.0" y="52" width="404" height="63"/>
+                                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="EG8-TT-lSs" firstAttribute="top" secondItem="XNr-cf-Mhd" secondAttribute="top" constant="50" id="dEA-ex-IQ7"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="XNr-cf-Mhd" firstAttribute="top" secondItem="fbG-GV-3kb" secondAttribute="top" id="6CV-lA-ZJw"/>
+                                    <constraint firstAttribute="bottom" secondItem="XNr-cf-Mhd" secondAttribute="bottom" id="9WQ-vR-KUe"/>
+                                    <constraint firstAttribute="trailing" secondItem="XNr-cf-Mhd" secondAttribute="trailing" id="FIV-ld-305"/>
+                                    <constraint firstItem="XNr-cf-Mhd" firstAttribute="leading" secondItem="fbG-GV-3kb" secondAttribute="leading" id="FOH-ep-K6T"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -314,10 +358,14 @@
                             <constraint firstItem="EUQ-SF-lmo" firstAttribute="top" secondItem="xIX-GG-xJI" secondAttribute="bottom" constant="100" id="29v-GK-Fa2"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xIX-GG-xJI" secondAttribute="trailing" constant="19" id="4Ws-32-Lhl"/>
                             <constraint firstItem="xIX-GG-xJI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="19" id="5sr-93-QLh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fbG-GV-3kb" secondAttribute="trailing" constant="5" id="Kgk-jL-yfg"/>
                             <constraint firstAttribute="bottom" secondItem="wUf-AB-Elc" secondAttribute="bottom" id="TWe-QU-pog"/>
                             <constraint firstItem="wUf-AB-Elc" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="W9L-pq-h6I"/>
                             <constraint firstItem="xIX-GG-xJI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="Woa-gd-eD6"/>
+                            <constraint firstItem="fbG-GV-3kb" firstAttribute="top" secondItem="EUQ-SF-lmo" secondAttribute="bottom" constant="100" id="ZVk-Pu-lAg"/>
                             <constraint firstItem="EUQ-SF-lmo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="bdW-9B-2bu"/>
+                            <constraint firstItem="fbG-GV-3kb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="fxc-4D-VdL"/>
+                            <constraint firstItem="fbG-GV-3kb" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="hS5-Ai-0hg"/>
                             <constraint firstItem="wUf-AB-Elc" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="r7j-z8-kvu"/>
                             <constraint firstItem="wUf-AB-Elc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="y5I-XM-Mvw"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EUQ-SF-lmo" secondAttribute="trailing" constant="5" id="y7Y-LC-wf2"/>
@@ -327,6 +375,7 @@
                     <connections>
                         <outlet property="cityLabel" destination="g4o-Vs-tdI" id="mld-Yh-RQe"/>
                         <outlet property="feelsLikeTemperatureLabel" destination="kiU-4A-QJg" id="QCq-Vn-5oe"/>
+                        <outlet property="footerView" destination="fbG-GV-3kb" id="vgC-QG-MLz"/>
                         <outlet property="imageIconForWeater" destination="Yb8-s9-cJS" id="Fg8-Nc-d8H"/>
                         <outlet property="mainView" destination="EUQ-SF-lmo" id="HBo-Uw-WWV"/>
                         <outlet property="maxTemperatureLabel" destination="oPX-Py-Cfv" id="FO2-PH-8HQ"/>
@@ -620,6 +669,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="8c8fc9e095026e2c53042399ddcb9e9e" width="739" height="1600"/>
         <image name="calendar" catalog="system" width="128" height="106"/>
         <image name="car" catalog="system" width="128" height="93"/>
         <image name="gearshape" catalog="system" width="128" height="121"/>
@@ -631,8 +681,14 @@
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

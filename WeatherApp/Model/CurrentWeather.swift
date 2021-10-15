@@ -31,9 +31,17 @@ struct CurrentWeather {
     }
     
     let pressure: Int
+    let humidity: Int
     let visibility: Int
     let windSpeed: Double
+    var windSpeedString: String {
+        return String(format: "%.0f", windSpeed)
+    }
+    
     let conditionCode: Int
+    let sunrise: Int
+    let sunset: Int
+    
     var systemIconNameString: String {
         switch conditionCode {
         case 200...232: return "cloud.bold.rain.fill"
@@ -56,8 +64,11 @@ struct CurrentWeather {
         maxTemperature = currentWeatherData.main.tempMax
         minTemperature = currentWeatherData.main.tempMin
         pressure = currentWeatherData.main.pressure
+        humidity = currentWeatherData.main.humidity
         visibility = currentWeatherData.visibility
         windSpeed = currentWeatherData.wind.speed
-        conditionCode = currentWeatherData.weather.first!.id  
+        conditionCode = currentWeatherData.weather.first!.id
+        sunrise = currentWeatherData.sys.sunrise
+        sunset = currentWeatherData.sys.sunset
     }
 }

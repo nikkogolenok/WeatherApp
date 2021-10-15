@@ -82,6 +82,7 @@
 		447D441A2703377B00302C5B /* WeatherApp */ = {
 			isa = PBXGroup;
 			children = (
+				448170A52719A06A00EF52C6 /* Xib */,
 				447D44352704856300302C5B /* Extension */,
 				447D44322703458900302C5B /* Model */,
 				447D44302703454200302C5B /* Views */,
@@ -143,6 +144,13 @@
 				44E55C55270C6D66009EF745 /* MainViewController+Extension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		448170A52719A06A00EF52C6 /* Xib */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Xib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

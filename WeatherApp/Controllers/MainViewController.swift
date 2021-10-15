@@ -16,6 +16,7 @@ class MainViewController: UIViewController {
     
     // MARK: - Outlet
     @IBOutlet weak var mainView: UIView!
+    @IBOutlet weak var footerView: UIView!
     @IBOutlet weak var cityLabel: UIButton!
     @IBOutlet weak var temperatureLabel: UILabel!
     @IBOutlet weak var feelsLikeTemperatureLabel: UILabel!
@@ -37,14 +38,24 @@ class MainViewController: UIViewController {
             
             DispatchQueue.main.async {
                 self.updateInterfaceWith(weather: currentWeather)
-                print(currentWeather.maxTemperature)
-                print(currentWeather.minTemperature)
+                print("Температура \(currentWeather.temperature)")
+                print("По ощущениям \(currentWeather.feelLikeTemperatureString)")
+                print("Макс темп \(currentWeather.maxTemperatureString)")
+                print("Мин темп \(currentWeather.minTemperatureString)")
+                print("Давление \(currentWeather.pressure)")
+                print("Влажность \(currentWeather.humidity)")
+                print("Видимость \(currentWeather.visibility)")
+                print("Скорость ветра \(currentWeather.windSpeedString)")
+                print("Восход \(currentWeather.sunrise)")
+                print("закат \(currentWeather.sunset)")
             }
         }
         //networkWeatherManager.fetchCurrentWeather(forRequestType: ))
         
         
-        mainView.backgroundColor = .green
+        mainView.backgroundColor = .black
+        mainView.alpha = 0.4
+
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyKilometer
         
@@ -84,6 +95,7 @@ class MainViewController: UIViewController {
         self.minTemperatureLabel.text = weather.minTemperatureString
         self.pressureLabel.text = String(weather.pressure)
         self.visibilityLabel.text = String(weather.visibility)
+        self.windSpeed.text = weather.windSpeedString
         self.imageIconForWeater.image = UIImage(systemName: weather.systemIconNameString)
     }
     // MARK: - Actions
