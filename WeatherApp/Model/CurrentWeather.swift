@@ -33,6 +33,10 @@ struct CurrentWeather {
     let pressure: Int
     let humidity: Int
     let visibility: Int
+    var visibilityString: String {
+        return String(format: "%.0f", visibility)
+    }
+    
     let windSpeed: Double
     var windSpeedString: String {
         return String(format: "%.0f", windSpeed)

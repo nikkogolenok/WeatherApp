@@ -17,6 +17,8 @@ class MainViewController: UIViewController {
     // MARK: - Outlet
     @IBOutlet weak var mainView: UIView!
     @IBOutlet weak var footerView: UIView!
+    @IBOutlet weak var weatherViewByDay: WeatherViewByDay!
+    @IBOutlet weak var weatherViewByTime: WeatherViewByTime!
     @IBOutlet weak var cityLabel: UIButton!
     @IBOutlet weak var temperatureLabel: UILabel!
     @IBOutlet weak var feelsLikeTemperatureLabel: UILabel!
@@ -32,7 +34,7 @@ class MainViewController: UIViewController {
     // MARK: viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         networkWeatherManager.onCompletion = { [weak self] currentWeather in
             guard let self = self else { return }
             
@@ -44,7 +46,7 @@ class MainViewController: UIViewController {
                 print("Мин темп \(currentWeather.minTemperatureString)")
                 print("Давление \(currentWeather.pressure)")
                 print("Влажность \(currentWeather.humidity)")
-                print("Видимость \(currentWeather.visibility)")
+                print("Видимость \(currentWeather.visibility/1000)")
                 print("Скорость ветра \(currentWeather.windSpeedString)")
                 print("Восход \(currentWeather.sunrise)")
                 print("закат \(currentWeather.sunset)")
@@ -55,6 +57,8 @@ class MainViewController: UIViewController {
         
         mainView.backgroundColor = .black
         mainView.alpha = 0.4
+        footerView.alpha = 0.5
+        
 
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyKilometer
@@ -89,14 +93,22 @@ class MainViewController: UIViewController {
     
     // MARK: - Methods
     private func updateInterfaceWith(weather: CurrentWeather) {
+        // MainView
         self.temperatureLabel.text = weather.temperatureString
         self.feelsLikeTemperatureLabel.text = weather.feelLikeTemperatureString
         self.maxTemperatureLabel.text = weather.maxTemperatureString
         self.minTemperatureLabel.text = weather.minTemperatureString
         self.pressureLabel.text = String(weather.pressure)
-        self.visibilityLabel.text = String(weather.visibility)
+        self.visibilityLabel.text = String(weather.visibility/1000)
         self.windSpeed.text = weather.windSpeedString
         self.imageIconForWeater.image = UIImage(systemName: weather.systemIconNameString)
+        // WeatherViewByDay
+        self.weatherViewByDay.imageByDay.image = UIImage(systemName: weather.systemIconNameString)
+        self.weatherViewByDay.maxTemperatureLabel.text = weather.maxTemperatureString
+        self.weatherViewByDay.minTemperatureLabel.text = weather.minTemperatureString
+        // WeatherViewByTime
+        self.weatherViewByTime.imageByTime.image = UIImage(systemName: weather.systemIconNameString)
+        self.weatherViewByTime.tempertureByTime.text = weather.temperatureString
     }
     // MARK: - Actions
     @IBAction func goToMapVC(_ sender: UIButton) {
