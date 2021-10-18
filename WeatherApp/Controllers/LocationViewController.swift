@@ -14,8 +14,7 @@ class LocationViewController: UIViewController {
     
     // MARK: - Outlet
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var searchLocationLabel: UILabel!
-    
+    @IBOutlet weak var searchLocationTF: UITextField!
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -30,7 +29,6 @@ class LocationViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
-        print("Hello")
     }
     
     private func addBarButtonsItem() {
@@ -54,6 +52,6 @@ class LocationViewController: UIViewController {
     }
     
     @objc func updateTableView() {
-        
+        dismiss(animated: true)
     }
 }

@@ -19,14 +19,12 @@ class MainViewController: UIViewController {
     @IBOutlet weak var footerView: UIView!
     @IBOutlet weak var weatherViewByDay: WeatherViewByDay!
     @IBOutlet weak var weatherViewByTime: WeatherViewByTime!
+    @IBOutlet weak var leftView: LeftView!
+    @IBOutlet weak var rightView: RightView!
     @IBOutlet weak var cityLabel: UIButton!
     @IBOutlet weak var temperatureLabel: UILabel!
     @IBOutlet weak var feelsLikeTemperatureLabel: UILabel!
     @IBOutlet weak var imageIconForWeater: UIImageView!
-    @IBOutlet weak var maxTemperatureLabel: UILabel!
-    @IBOutlet weak var minTemperatureLabel: UILabel!
-    @IBOutlet weak var pressureLabel: UILabel!
-    @IBOutlet weak var visibilityLabel: UILabel!
     @IBOutlet weak var windSpeed: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
     
@@ -96,12 +94,14 @@ class MainViewController: UIViewController {
         // MainView
         self.temperatureLabel.text = weather.temperatureString
         self.feelsLikeTemperatureLabel.text = weather.feelLikeTemperatureString
-        self.maxTemperatureLabel.text = weather.maxTemperatureString
-        self.minTemperatureLabel.text = weather.minTemperatureString
-        self.pressureLabel.text = String(weather.pressure)
-        self.visibilityLabel.text = String(weather.visibility/1000)
         self.windSpeed.text = weather.windSpeedString
         self.imageIconForWeater.image = UIImage(systemName: weather.systemIconNameString)
+        // LeftView
+        self.leftView.maxTemperature.text = weather.maxTemperatureString
+        self.leftView.pressureValueLabel.text = String(weather.pressure)
+        // RightView
+        self.rightView.minTemperature.text = weather.minTemperatureString
+        self.rightView.visibilityValueLabel.text = String(weather.visibility/1000)
         // WeatherViewByDay
         self.weatherViewByDay.imageByDay.image = UIImage(systemName: weather.systemIconNameString)
         self.weatherViewByDay.maxTemperatureLabel.text = weather.maxTemperatureString
@@ -110,6 +110,7 @@ class MainViewController: UIViewController {
         self.weatherViewByTime.imageByTime.image = UIImage(systemName: weather.systemIconNameString)
         self.weatherViewByTime.tempertureByTime.text = weather.temperatureString
     }
+    
     // MARK: - Actions
     @IBAction func goToMapVC(_ sender: UIButton) {
         guard let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MapVC") as? MapViewController else { return }

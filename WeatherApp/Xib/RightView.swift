@@ -1,19 +1,19 @@
 //
-//  WeatherViewByTime.swift
+//  RightView.swift
 //  WeatherApp
 //
-//  Created by Никита Коголенок on 16.10.21.
+//  Created by Никита Коголенок on 17.10.21.
 //
 
 import UIKit
 
-class WeatherViewByTime: UIView {
+class RightView: UIView {
     
     // MARK: - Outlet
     @IBOutlet var contentView: UIView!
-    @IBOutlet weak var imageByTime: UIImageView!
-    @IBOutlet weak var tempertureByTime: UILabel!
-    @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var minTemperature: UILabel!
+    @IBOutlet weak var visibilityLabel: UILabel!
+    @IBOutlet weak var visibilityValueLabel: UILabel!
     
     // MARK: - For using CustonView in code
     override init(frame: CGRect) {
@@ -31,7 +31,7 @@ class WeatherViewByTime: UIView {
     
     // MARK: - Method
     private func commonInit() {
-        Bundle.main.loadNibNamed("WeatherViewByTime", owner: self, options: nil)
+        Bundle.main.loadNibNamed("RightView", owner: self, options: nil)
         addSubview(contentView)
         contentView.frame = self.bounds
         contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
