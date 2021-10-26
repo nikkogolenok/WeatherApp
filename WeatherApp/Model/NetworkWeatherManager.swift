@@ -26,7 +26,11 @@ class NetworkWeatherManager {
         case coordinate(latitude: CLLocationDegrees, longitude: CLLocationDegrees)
     }
     
+    static let shared = NetworkWeatherManager()
+    
     var onCompletion: ((CurrentWeather) -> Void)?
+    
+    private init() { }
     
     func fetchCurrentWeather(forRequestType requestType: RequestType) {
         switch requestType {
@@ -50,6 +54,21 @@ class NetworkWeatherManager {
         }
         return nil
     }
+    
+    func parseJSONCoordinate(withData data: Data) -> CurrentWeather? {
+        let decoder = JSONDecoder()
+
+        do {
+            let currentWeatherCoordinate =  try decoder.decode(CurrentWeatherData.self, from: data)
+            guard let currentWeather = CurrentWeather(currentWeatherData: currentWeatherCoordinate) else { return nil }
+            return currentWeather
+        }
+        catch let error as NSError {
+            print(error.localizedDescription)
+        }
+        return nil
+    }
+    
     
     private func cityRequest(city: String) {
         let cityUrlString = Urls.urlCity.replacingOccurrences(of: UrlParameters.city, with: city)
@@ -76,15 +95,11 @@ class NetworkWeatherManager {
         let session = URLSession(configuration: .default)
         let task = session.dataTask(with: url) { data, response, error in
             if let data = data {
-                if let currentWeather = self.parseJSON(withData: data) {
-                    self.onCompletion?(currentWeather)
+                if let currentWeatherCoordinate = self.parseJSON(withData: data) {
+                    self.onCompletion?(currentWeatherCoordinate)
                 }
             }
         }
         task.resume()
-    }
-    
-    private func createUrl(url: String) {
-        
     }
 }

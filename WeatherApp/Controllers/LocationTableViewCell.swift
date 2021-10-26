@@ -9,10 +9,14 @@ import UIKit
 
 class LocationTableViewCell: UITableViewCell {
     
+    // MARK - Outlet
+    @IBOutlet weak var imageLocation: UIImageView!
+    @IBOutlet weak var countryLabel: UILabel!
+    @IBOutlet weak var cityLabel: UILabel!
+    @IBOutlet weak var weatherLabel: UILabel!
+    @IBOutlet weak var temperatureLabel: UILabel!
     
     
-    
-
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

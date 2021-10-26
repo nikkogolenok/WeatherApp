@@ -24,6 +24,8 @@
 		448170BB271C442300EF52C6 /* LeftView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448170BA271C442300EF52C6 /* LeftView.swift */; };
 		448170BD271C49AE00EF52C6 /* RightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448170BC271C49AE00EF52C6 /* RightView.swift */; };
 		448170BF271C49D300EF52C6 /* RightView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 448170BE271C49D300EF52C6 /* RightView.xib */; };
+		448170C1271E155E00EF52C6 /* CurrentWeatherCoordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448170C0271E155E00EF52C6 /* CurrentWeatherCoordinate.swift */; };
+		448170C3271F0BC900EF52C6 /* MainViewController+alertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448170C2271F0BC900EF52C6 /* MainViewController+alertController.swift */; };
 		44AA76122705287700BD27FA /* LocationViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AA76112705287700BD27FA /* LocationViewController+Extension.swift */; };
 		44AA76152705EA5800BD27FA /* CurrentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AA76142705EA5800BD27FA /* CurrentWeather.swift */; };
 		44D96098271833CA00089C29 /* LocationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D96096271833CA00089C29 /* LocationTableViewCell.swift */; };
@@ -55,6 +57,8 @@
 		448170BA271C442300EF52C6 /* LeftView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftView.swift; sourceTree = "<group>"; };
 		448170BC271C49AE00EF52C6 /* RightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightView.swift; sourceTree = "<group>"; };
 		448170BE271C49D300EF52C6 /* RightView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RightView.xib; sourceTree = "<group>"; };
+		448170C0271E155E00EF52C6 /* CurrentWeatherCoordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherCoordinate.swift; sourceTree = "<group>"; };
+		448170C2271F0BC900EF52C6 /* MainViewController+alertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController+alertController.swift"; sourceTree = "<group>"; };
 		44AA76112705287700BD27FA /* LocationViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LocationViewController+Extension.swift"; sourceTree = "<group>"; };
 		44AA76142705EA5800BD27FA /* CurrentWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeather.swift; sourceTree = "<group>"; };
 		44D96096271833CA00089C29 /* LocationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTableViewCell.swift; sourceTree = "<group>"; };
@@ -144,6 +148,7 @@
 		447D44322703458900302C5B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				448170C0271E155E00EF52C6 /* CurrentWeatherCoordinate.swift */,
 				447D443327044C5900302C5B /* CurrentWeatherData.swift */,
 				44AA76142705EA5800BD27FA /* CurrentWeather.swift */,
 				44E55C51270C4BF4009EF745 /* NetworkWeatherManager.swift */,
@@ -158,6 +163,7 @@
 				447D44362704858A00302C5B /* UIView+Extension.swift */,
 				44AA76112705287700BD27FA /* LocationViewController+Extension.swift */,
 				44E55C55270C6D66009EF745 /* MainViewController+Extension.swift */,
+				448170C2271F0BC900EF52C6 /* MainViewController+alertController.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -268,8 +274,10 @@
 				44D96098271833CA00089C29 /* LocationTableViewCell.swift in Sources */,
 				44EE9CD12704DFB100E388AD /* MapViewController.swift in Sources */,
 				44EE9CD32704EEDB00E388AD /* LocationViewController.swift in Sources */,
+				448170C3271F0BC900EF52C6 /* MainViewController+alertController.swift in Sources */,
 				44E55C52270C4BF4009EF745 /* NetworkWeatherManager.swift in Sources */,
 				44E55C54270C4C49009EF745 /* Constants.swift in Sources */,
+				448170C1271E155E00EF52C6 /* CurrentWeatherCoordinate.swift in Sources */,
 				44E55C56270C6D66009EF745 /* MainViewController+Extension.swift in Sources */,
 				448170BD271C49AE00EF52C6 /* RightView.swift in Sources */,
 			);

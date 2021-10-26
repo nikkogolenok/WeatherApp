@@ -12,7 +12,7 @@ class MainViewController: UIViewController {
 
     // MARK: - Variables
     let locationManager = CLLocationManager()
-    var networkWeatherManager = NetworkWeatherManager()
+    var networkWeatherManager = NetworkWeatherManager.shared
     
     // MARK: - Outlet
     @IBOutlet weak var mainView: UIView!
@@ -32,27 +32,8 @@ class MainViewController: UIViewController {
     // MARK: viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        networkWeatherManager.onCompletion = { [weak self] currentWeather in
-            guard let self = self else { return }
-            
-            DispatchQueue.main.async {
-                self.updateInterfaceWith(weather: currentWeather)
-                print("Температура \(currentWeather.temperature)")
-                print("По ощущениям \(currentWeather.feelLikeTemperatureString)")
-                print("Макс темп \(currentWeather.maxTemperatureString)")
-                print("Мин темп \(currentWeather.minTemperatureString)")
-                print("Давление \(currentWeather.pressure)")
-                print("Влажность \(currentWeather.humidity)")
-                print("Видимость \(currentWeather.visibility/1000)")
-                print("Скорость ветра \(currentWeather.windSpeedString)")
-                print("Восход \(currentWeather.sunrise)")
-                print("закат \(currentWeather.sunset)")
-            }
-        }
+        
         //networkWeatherManager.fetchCurrentWeather(forRequestType: ))
-        
-        
         mainView.backgroundColor = .black
         mainView.alpha = 0.4
         footerView.alpha = 0.5
@@ -78,6 +59,24 @@ class MainViewController: UIViewController {
     // MARK: viewWillAppear
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+    
+        networkWeatherManager.onCompletion = { [weak self] currentWeather in
+            guard let self = self else { return }
+            
+            DispatchQueue.main.async {
+                self.updateInterfaceWith(weather: currentWeather)
+                print("Температура \(currentWeather.temperature)")
+                print("По ощущениям \(currentWeather.feelLikeTemperatureString)")
+                print("Макс темп \(currentWeather.maxTemperatureString)")
+                print("Мин темп \(currentWeather.minTemperatureString)")
+                print("Давление \(currentWeather.pressure)")
+                print("Влажность \(currentWeather.humidity)")
+                print("Видимость \(currentWeather.visibility/1000)")
+                print("Скорость ветра \(currentWeather.windSpeedString)")
+                print("Восход \(currentWeather.sunrise)")
+                print("закат \(currentWeather.sunset)")
+            }
+        }
         
         navigationController?.setNavigationBarHidden(true, animated: false)
     }
@@ -119,11 +118,11 @@ class MainViewController: UIViewController {
     }
     
     
-    @IBAction func goToSearchVC(_ sender: UIButton) {
-        guard let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SearchVC") as? LocationViewController else { return }
-        
-        navigationController?.pushViewController(viewController, animated: true)
-    }
+//    @IBAction func goToSearchVC(_ sender: UIButton) {
+//        guard let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SearchVC") as? LocationViewController else { return }
+//
+//        navigationController?.pushViewController(viewController, animated: true)
+//    }
     
     
     @IBAction func goToSettingsVC(_ sender: UIButton) {
@@ -131,5 +130,16 @@ class MainViewController: UIViewController {
         
         navigationController?.pushViewController(viewController, animated: true)
     }
+    
+    
+    
+    @IBAction func searchPressed(_ sender: UIButton) {
+        self.presentSearchAlertController(withTitle: "Введите город", message: nil, style: .alert) { [unowned self] city in
+            self.networkWeatherManager.fetchCurrentWeather(forRequestType: .cityName(city: city))
+        }
+    }
+    
+    
+    
 }
 

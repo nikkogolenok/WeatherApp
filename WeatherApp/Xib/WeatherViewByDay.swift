@@ -30,7 +30,7 @@ class WeatherViewByDay: UIView {
         commonInit()
     }
     
-    
+
     // MARK: - Method
     private func commonInit() {
         Bundle.main.loadNibNamed("WeatherViewByDay", owner: self, options: nil)

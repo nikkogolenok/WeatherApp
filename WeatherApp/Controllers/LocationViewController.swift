@@ -7,6 +7,7 @@
 
 import UIKit
 
+
 class LocationViewController: UIViewController {
     
     // MARK: - Varaibles
@@ -24,6 +25,7 @@ class LocationViewController: UIViewController {
         tableView.dataSource = self
         
         addBarButtonsItem()
+        searchCityByName(name: "")
     }
     
     override func viewDidLayoutSubviews() {
@@ -45,6 +47,15 @@ class LocationViewController: UIViewController {
         //navigationItem.leftBarButtonItem = leftBarButton
         navigationItem.rightBarButtonItem = rightBarButton
     }
+    
+    // MARK: - Method
+    private func searchCityByName(name: String) {
+        
+        guard let cityName = searchLocationTF.text else { return }
+        NetworkWeatherManager.shared.fetchCurrentWeather(forRequestType: .cityName(city: cityName))
+    }
+    
+    
     
     // MARK: - Actions
     @objc func goBackOnMainView() {
