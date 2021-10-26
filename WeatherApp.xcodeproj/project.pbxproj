@@ -26,6 +26,7 @@
 		448170BF271C49D300EF52C6 /* RightView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 448170BE271C49D300EF52C6 /* RightView.xib */; };
 		448170C1271E155E00EF52C6 /* CurrentWeatherCoordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448170C0271E155E00EF52C6 /* CurrentWeatherCoordinate.swift */; };
 		448170C3271F0BC900EF52C6 /* MainViewController+alertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448170C2271F0BC900EF52C6 /* MainViewController+alertController.swift */; };
+		448170C82728A8B000EF52C6 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 448170C72728A8B000EF52C6 /* RxSwift */; };
 		44AA76122705287700BD27FA /* LocationViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AA76112705287700BD27FA /* LocationViewController+Extension.swift */; };
 		44AA76152705EA5800BD27FA /* CurrentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AA76142705EA5800BD27FA /* CurrentWeather.swift */; };
 		44D96098271833CA00089C29 /* LocationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D96096271833CA00089C29 /* LocationTableViewCell.swift */; };
@@ -77,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				448170C82728A8B000EF52C6 /* RxSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,6 +201,9 @@
 			dependencies = (
 			);
 			name = WeatherApp;
+			packageProductDependencies = (
+				448170C72728A8B000EF52C6 /* RxSwift */,
+			);
 			productName = WeatherApp;
 			productReference = 447D44182703377B00302C5B /* WeatherApp.app */;
 			productType = "com.apple.product-type.application";
@@ -228,6 +233,9 @@
 				ru,
 			);
 			mainGroup = 447D440F2703377B00302C5B;
+			packageReferences = (
+				448170C62728A8B000EF52C6 /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
 			productRefGroup = 447D44192703377B00302C5B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -509,6 +517,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		448170C62728A8B000EF52C6 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		448170C72728A8B000EF52C6 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 448170C62728A8B000EF52C6 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 447D44102703377B00302C5B /* Project object */;
 }

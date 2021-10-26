@@ -28,9 +28,9 @@ class NetworkWeatherManager {
     
     static let shared = NetworkWeatherManager()
     
-    var onCompletion: ((CurrentWeather) -> Void)?
-    
     private init() { }
+    
+    var onCompletion: ((CurrentWeather) -> Void)?
     
     func fetchCurrentWeather(forRequestType requestType: RequestType) {
         switch requestType {

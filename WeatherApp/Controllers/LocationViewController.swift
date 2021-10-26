@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import RxSwift
 
 class LocationViewController: UIViewController {
     
@@ -50,7 +50,6 @@ class LocationViewController: UIViewController {
     
     // MARK: - Method
     private func searchCityByName(name: String) {
-        
         guard let cityName = searchLocationTF.text else { return }
         NetworkWeatherManager.shared.fetchCurrentWeather(forRequestType: .cityName(city: cityName))
     }

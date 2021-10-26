@@ -7,12 +7,14 @@
 
 import UIKit
 import CoreLocation
+import RxSwift
 
 class MainViewController: UIViewController {
 
     // MARK: - Variables
     let locationManager = CLLocationManager()
     var networkWeatherManager = NetworkWeatherManager.shared
+    private let disposeBag = DisposeBag()
     
     // MARK: - Outlet
     @IBOutlet weak var mainView: UIView!
@@ -27,12 +29,16 @@ class MainViewController: UIViewController {
     @IBOutlet weak var imageIconForWeater: UIImageView!
     @IBOutlet weak var windSpeed: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
+    // Test TextField
+    @IBOutlet weak var testCityNameTF: UITextField!
+    
     
     // MARK: - Lifecycle
     // MARK: viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        addTextField()
         //networkWeatherManager.fetchCurrentWeather(forRequestType: ))
         mainView.backgroundColor = .black
         mainView.alpha = 0.4
@@ -110,6 +116,17 @@ class MainViewController: UIViewController {
         self.weatherViewByTime.tempertureByTime.text = weather.temperatureString
     }
     
+    private func addTextField() {
+        testCityNameTF.rx
+            .text
+            .distinctUntilChanged()
+            .throttle(.milliseconds(300), scheduler: MainScheduler.asyncInstance)
+            .subscribe { text in
+                print(text)
+            }
+            .disposed(by: disposeBag)
+    }
+    
     // MARK: - Actions
     @IBAction func goToMapVC(_ sender: UIButton) {
         guard let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MapVC") as? MapViewController else { return }
@@ -118,11 +135,11 @@ class MainViewController: UIViewController {
     }
     
     
-//    @IBAction func goToSearchVC(_ sender: UIButton) {
-//        guard let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SearchVC") as? LocationViewController else { return }
-//
-//        navigationController?.pushViewController(viewController, animated: true)
-//    }
+    @IBAction func goToSearchVC(_ sender: UIButton) {
+        guard let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SearchVC") as? LocationViewController else { return }
+
+        navigationController?.pushViewController(viewController, animated: true)
+    }
     
     
     @IBAction func goToSettingsVC(_ sender: UIButton) {
@@ -131,15 +148,10 @@ class MainViewController: UIViewController {
         navigationController?.pushViewController(viewController, animated: true)
     }
     
-    
-    
     @IBAction func searchPressed(_ sender: UIButton) {
         self.presentSearchAlertController(withTitle: "Введите город", message: nil, style: .alert) { [unowned self] city in
             self.networkWeatherManager.fetchCurrentWeather(forRequestType: .cityName(city: city))
         }
     }
-    
-    
-    
 }
 

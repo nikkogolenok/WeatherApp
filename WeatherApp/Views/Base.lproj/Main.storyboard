@@ -93,7 +93,7 @@
                                             <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="searchPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="704-Wm-b4k"/>
+                                            <action selector="goToSearchVC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BFe-mz-Km0"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Hb-2r-7pN">
@@ -315,6 +315,11 @@
                                 <viewLayoutGuide key="contentLayoutGuide" id="3kF-8c-Tic"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="A0M-Zd-X6d"/>
                             </scrollView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TbQ-eO-nbl">
+                                <rect key="frame" x="0.0" y="163" width="414" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -323,6 +328,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xIX-GG-xJI" secondAttribute="trailing" constant="19" id="4Ws-32-Lhl"/>
                             <constraint firstItem="xIX-GG-xJI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="19" id="5sr-93-QLh"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fbG-GV-3kb" secondAttribute="trailing" constant="5" id="Kgk-jL-yfg"/>
+                            <constraint firstItem="TbQ-eO-nbl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="NKu-P9-hLP"/>
                             <constraint firstAttribute="bottom" secondItem="wUf-AB-Elc" secondAttribute="bottom" id="TWe-QU-pog"/>
                             <constraint firstItem="wUf-AB-Elc" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="W9L-pq-h6I"/>
                             <constraint firstItem="xIX-GG-xJI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="Woa-gd-eD6"/>
@@ -331,6 +337,8 @@
                             <constraint firstItem="fbG-GV-3kb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="fxc-4D-VdL"/>
                             <constraint firstItem="fbG-GV-3kb" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="hS5-Ai-0hg"/>
                             <constraint firstItem="wUf-AB-Elc" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="r7j-z8-kvu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TbQ-eO-nbl" secondAttribute="trailing" id="ufh-QG-ge7"/>
+                            <constraint firstItem="TbQ-eO-nbl" firstAttribute="top" secondItem="xIX-GG-xJI" secondAttribute="bottom" constant="20" id="uu9-jc-uMB"/>
                             <constraint firstItem="wUf-AB-Elc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="y5I-XM-Mvw"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EUQ-SF-lmo" secondAttribute="trailing" constant="5" id="y7Y-LC-wf2"/>
                         </constraints>
@@ -345,6 +353,7 @@
                         <outlet property="mainView" destination="EUQ-SF-lmo" id="HBo-Uw-WWV"/>
                         <outlet property="rightView" destination="s2T-mU-sak" id="YFs-ec-psw"/>
                         <outlet property="temperatureLabel" destination="PLp-Is-Ldu" id="iUG-Qi-uWG"/>
+                        <outlet property="testCityNameTF" destination="TbQ-eO-nbl" id="fX4-lZ-5cE"/>
                         <outlet property="timeLabel" destination="Cy0-Pk-wke" id="g36-0d-HzK"/>
                         <outlet property="weatherViewByDay" destination="Mni-gH-deu" id="xC8-iI-fb5"/>
                         <outlet property="weatherViewByTime" destination="rw3-hd-Q7v" id="Otl-Sl-ghZ"/>
