@@ -18,37 +18,28 @@ class MainViewController: UIViewController {
     
     // MARK: - Outlet
     @IBOutlet weak var mainView: UIView!
+    @IBOutlet weak var topView: TopView!
+    @IBOutlet weak var leftView: LeftView!
+    @IBOutlet weak var rightView: RightView!
+    @IBOutlet weak var bottonView: BottomView!
+    @IBOutlet weak var cityLabel: UIButton!
+    @IBOutlet weak var imageIconForWeater: UIImageView!
     @IBOutlet weak var footerView: UIView!
     @IBOutlet weak var weatherViewByDay: WeatherViewByDay!
     @IBOutlet weak var weatherViewByTime: WeatherViewByTime!
-    @IBOutlet weak var leftView: LeftView!
-    @IBOutlet weak var rightView: RightView!
-    @IBOutlet weak var cityLabel: UIButton!
-    @IBOutlet weak var temperatureLabel: UILabel!
-    @IBOutlet weak var feelsLikeTemperatureLabel: UILabel!
-    @IBOutlet weak var imageIconForWeater: UIImageView!
-    @IBOutlet weak var windSpeed: UILabel!
-    @IBOutlet weak var timeLabel: UILabel!
-    // Test TextField
-    @IBOutlet weak var testCityNameTF: UITextField!
-    
     
     // MARK: - Lifecycle
     // MARK: viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        addTextField()
-        //networkWeatherManager.fetchCurrentWeather(forRequestType: ))
+    
         mainView.backgroundColor = .black
         mainView.alpha = 0.4
         footerView.alpha = 0.5
-        
-
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyKilometer
-        
         locationManager.requestAlwaysAuthorization()
+        
         let status = locationManager.authorizationStatus
         if status == .authorizedWhenInUse || status == .authorizedAlways {
             locationManager.requestLocation()
@@ -71,6 +62,7 @@ class MainViewController: UIViewController {
             
             DispatchQueue.main.async {
                 self.updateInterfaceWith(weather: currentWeather)
+                print("Город \(String(describing: currentWeather.cityName))") 
                 print("Температура \(currentWeather.temperature)")
                 print("По ощущениям \(currentWeather.feelLikeTemperatureString)")
                 print("Макс темп \(currentWeather.maxTemperatureString)")
@@ -97,16 +89,18 @@ class MainViewController: UIViewController {
     // MARK: - Methods
     private func updateInterfaceWith(weather: CurrentWeather) {
         // MainView
-        self.temperatureLabel.text = weather.temperatureString
-        self.feelsLikeTemperatureLabel.text = weather.feelLikeTemperatureString
-        self.windSpeed.text = weather.windSpeedString
         self.imageIconForWeater.image = UIImage(systemName: weather.systemIconNameString)
+        // TopView
+        self.topView.temperatureLabel.text = weather.temperatureString
+        self.topView.feelsLikeTemperatureLabel.text = weather.feelLikeTemperatureString
         // LeftView
         self.leftView.maxTemperature.text = weather.maxTemperatureString
         self.leftView.pressureValueLabel.text = String(weather.pressure)
         // RightView
         self.rightView.minTemperature.text = weather.minTemperatureString
         self.rightView.visibilityValueLabel.text = String(weather.visibility/1000)
+        // BottomView
+        self.bottonView.windSpeed.text = weather.windSpeedString
         // WeatherViewByDay
         self.weatherViewByDay.imageByDay.image = UIImage(systemName: weather.systemIconNameString)
         self.weatherViewByDay.maxTemperatureLabel.text = weather.maxTemperatureString
@@ -114,17 +108,6 @@ class MainViewController: UIViewController {
         // WeatherViewByTime
         self.weatherViewByTime.imageByTime.image = UIImage(systemName: weather.systemIconNameString)
         self.weatherViewByTime.tempertureByTime.text = weather.temperatureString
-    }
-    
-    private func addTextField() {
-        testCityNameTF.rx
-            .text
-            .distinctUntilChanged()
-            .throttle(.milliseconds(300), scheduler: MainScheduler.asyncInstance)
-            .subscribe { text in
-                print(text)
-            }
-            .disposed(by: disposeBag)
     }
     
     // MARK: - Actions

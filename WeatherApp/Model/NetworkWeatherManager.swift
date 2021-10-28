@@ -18,7 +18,8 @@ class NetworkWeatherManager {
     
     class Urls {
         static let urlCity = "https://api.openweathermap.org/data/2.5/weather?q=\(UrlParameters.city)&apikey=\(apiKey)&units=metric"
-        static let urlCoordinate = "https://api.openweathermap.org/data/2.5/onecall?lat=\(UrlParameters.latitude)&lon=\(UrlParameters.longitude)&appid=\(apiKey)&units=metric"
+        static let urlCoordinate = "api.openweathermap.org/data/2.5/weather?lat=\(UrlParameters.latitude)&lon=\(UrlParameters.longitude)&appid=\(apiKey)&units=metric"
+        //static let urlCoordinate = "https://api.openweathermap.org/data/2.5/onecall?lat=\(UrlParameters.latitude)&lon=\(UrlParameters.longitude)&appid=\(apiKey)&units=metric"
     }
     
     enum RequestType {
