@@ -9,6 +9,8 @@ import UIKit
 
 class LocationTableViewCell: UITableViewCell {
     
+    static let identifier = "LocationTableViewCell"
+    
     // MARK - Outlet
     @IBOutlet weak var imageLocation: UIImageView!
     @IBOutlet weak var countryLabel: UILabel!
@@ -26,4 +28,10 @@ class LocationTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
+    // MARK: - Method
+    func set(object: LocationData) {
+        self.countryLabel.text = object.countryName
+        self.cityLabel.text = object.cityName
+        self.temperatureLabel.text = object.temperature
+    }
 }

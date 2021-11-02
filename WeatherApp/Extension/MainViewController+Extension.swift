@@ -23,6 +23,8 @@ extension MainViewController: CLLocationManagerDelegate {
             let longitude = location.coordinate.longitude
             
             networkWeatherManager.fetchCurrentWeather(forRequestType: .coordinate(latitude: latitude, longitude: longitude))
+            print("Широта \(latitude)")
+            print("Долгота \(longitude)")
         }
     }
     

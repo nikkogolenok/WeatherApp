@@ -62,7 +62,8 @@ class MainViewController: UIViewController {
             
             DispatchQueue.main.async {
                 self.updateInterfaceWith(weather: currentWeather)
-                print("Город \(String(describing: currentWeather.cityName))") 
+                
+                print("Город \(String(describing: currentWeather.cityName))")
                 print("Температура \(currentWeather.temperature)")
                 print("По ощущениям \(currentWeather.feelLikeTemperatureString)")
                 print("Макс темп \(currentWeather.maxTemperatureString)")
@@ -71,8 +72,9 @@ class MainViewController: UIViewController {
                 print("Влажность \(currentWeather.humidity)")
                 print("Видимость \(currentWeather.visibility/1000)")
                 print("Скорость ветра \(currentWeather.windSpeedString)")
-                print("Восход \(currentWeather.sunrise)")
-                print("закат \(currentWeather.sunset)")
+                print("Восход \(String(describing: currentWeather.sunrise))")
+                print("закат \(String(describing: currentWeather.sunset))")
+                
             }
         }
         
