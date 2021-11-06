@@ -10,40 +10,29 @@ import CoreText
 
 // MARK: - CurrentWeatherDataByCoordinate
 struct CurrentWeatherDataByCoordinate: Codable {
-    let lat: Double
-    let lon: Double
+    let lat, lon: Double
     let timezone: String
     let timezoneOffset: Int
     let current: Current
     let minutely: [Minutely]
-    //let hourly: [Current]
-    let daily: Daily
+//    let hourly: [Current]
+    let daily: [Daily]
 
     enum CodingKeys: String, CodingKey {
-        case lat
-        case lon
-        case timezone
+        case lat, lon, timezone
         case timezoneOffset = "timezone_offset"
-        case current
-        case minutely
-        //case hourly
-        case daily
+        case current, minutely, daily//, hourly
     }
 }
 
 // MARK: - Current
 struct Current: Codable {
     let dt: Int
-    let sunrise: Int?
-    let sunset: Int?
-    let temp: Double
-    let feelsLike: Double
-    let pressure:Int
-    let humidity: Int
-    let dewPoint: Double
-    let uvi: Double
-    let clouds: Int
-    let visibility: Int
+    let sunrise, sunset: Int?
+    let temp, feelsLike: Double
+    let pressure, humidity: Int
+    let dewPoint, uvi: Double
+    let clouds, visibility: Int
     let windSpeed: Double
     let windDeg: Int
     let windGust: Double
@@ -52,23 +41,15 @@ struct Current: Codable {
     let rain: Rain?
 
     enum CodingKeys: String, CodingKey {
-        case dt
-        case sunrise
-        case sunset
-        case temp
+        case dt, sunrise, sunset, temp
         case feelsLike = "feels_like"
-        case pressure
-        case humidity
+        case pressure, humidity
         case dewPoint = "dew_point"
-        case uvi
-        case clouds
-        case visibility
+        case uvi, clouds, visibility
         case windSpeed = "wind_speed"
         case windDeg = "wind_deg"
         case windGust = "wind_gust"
-        case weather
-        case pop
-        case rain
+        case weather, pop, rain
     }
 }
 
@@ -115,43 +96,21 @@ struct Daily: Codable {
     let dt: Int
     let sunrise: Int
     let sunset: Int
-    let moonrise: Int
-    let moonset: Int
-    let moonPhase: Double
     let temp: Temp
     let feelsLike: FeelsLike
     let pressure: Int
     let humidity: Int
-    let dewPoint: Double
-    let windSpeed: Double
-    let windDeg: Int
-    let windGust: Double
-    let weather: [Weather]
-    let clouds: Int
-    let pop: Double
-    let uvi: Double
-    let rain: Double?
+//    let weather: [Weather]
 
     enum CodingKeys: String, CodingKey {
         case dt
         case sunrise
         case sunset
-        case moonrise
-        case moonset
-        case moonPhase = "moon_phase"
         case temp
         case feelsLike = "feels_like"
         case pressure
         case humidity
-        case dewPoint = "dew_point"
-        case windSpeed = "wind_speed"
-        case windDeg = "wind_deg"
-        case windGust = "wind_gust"
-        case weather
-        case clouds
-        case pop
-        case uvi
-        case rain
+//        case weather
     }
 }
 

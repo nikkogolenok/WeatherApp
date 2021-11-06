@@ -22,7 +22,7 @@ class MainViewController: UIViewController {
     @IBOutlet weak var leftView: LeftView!
     @IBOutlet weak var rightView: RightView!
     @IBOutlet weak var bottonView: BottomView!
-    @IBOutlet weak var cityLabel: UIButton!
+    @IBOutlet weak var cityName: UIButton!
     @IBOutlet weak var imageIconForWeater: UIImageView!
     @IBOutlet weak var footerView: UIView!
     @IBOutlet weak var weatherViewByDay: WeatherViewByDay!

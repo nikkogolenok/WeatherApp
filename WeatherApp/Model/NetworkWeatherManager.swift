@@ -8,6 +8,9 @@
 import Foundation
 import CoreLocation
 
+import Foundation
+import CoreLocation
+
 class NetworkWeatherManager {
     
     class UrlParameters {
@@ -62,7 +65,12 @@ class NetworkWeatherManager {
         let task = session.dataTask(with: url) { data, response, error in
             if let data = data {
                 if let currentWeather = self.parseJSONForCity(withData: data) {
-                    self.coordinateRequest(latitude: currentWeather.coord.lat, longitude: currentWeather.coord.lon)
+                    self.coordinateRequest(latitude: currentWeather.coord.lat, longitude: currentWeather.coord.lon) { [weak self] in
+                        guard var newWeather = $0 else { return }
+                        newWeather.cityName = city
+                        
+                        self?.onCompletion?(newWeather)
+                    }
                 }
             }
         }
@@ -73,17 +81,20 @@ class NetworkWeatherManager {
         let decoder = JSONDecoder()
         
         do {
-            let currentWeatherCoordinate =  try decoder.decode(CurrentWeatherDataByCoordinate.self, from: data)
-            guard let currentWeather = CurrentWeather(currentWeatherCoordinate: currentWeatherCoordinate) else { return nil }
+            let currentWeatherCoordinate = try decoder.decode(CurrentWeatherDataByCoordinate.self, from: data)
+            
+            let currentWeather = CurrentWeather(currentWeatherCoordinate: currentWeatherCoordinate)
             return currentWeather
         }
         catch let error as NSError {
-            print(error.localizedDescription)
+            print("Не верно в parseJSONForCoordinate", error.localizedDescription)
         }
         return nil
     }
     
-    private func coordinateRequest(latitude: Double, longitude: Double) {
+    private func coordinateRequest(latitude: Double,
+                                   longitude: Double,
+                                   onCompletion: ((CurrentWeather?) -> Void)? = nil) {
         let coordinateUrlString = Urls.urlCoordinate
             .replacingOccurrences(of: UrlParameters.latitude, with: String(latitude))
             .replacingOccurrences(of: UrlParameters.longitude, with: String(longitude))
@@ -92,10 +103,14 @@ class NetworkWeatherManager {
         
         let session = URLSession(configuration: .default)
         let task = session.dataTask(with: url) { data, response, error in
-            if let data = data {
-                if let currentWeatherCoordinate = self.parseJSONForCoordinate(withData: data) {
-                    self.onCompletion?(currentWeatherCoordinate)
-                }
+            guard let data = data,
+                  let currentWeatherCoordinate = self.parseJSONForCoordinate(withData: data) else { return }
+                  
+            if let onCompletion = onCompletion {
+                onCompletion(currentWeatherCoordinate)
+            }
+            else {
+                self.onCompletion?(currentWeatherCoordinate)
             }
         }
         task.resume()

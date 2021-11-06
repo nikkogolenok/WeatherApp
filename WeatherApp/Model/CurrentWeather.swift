@@ -8,7 +8,7 @@
 import Foundation
 
 struct CurrentWeather {
-    let cityName: String?
+    var cityName: String?
     let coordinate: Coord
     
     let temperature: Double
@@ -62,22 +62,22 @@ struct CurrentWeather {
         }
     }
 
-    init?(currentWeatherCoordinate: CurrentWeatherDataByCoordinate) {
+    init(currentWeatherCoordinate: CurrentWeatherDataByCoordinate) {
         cityName = nil
         coordinate = Coord(lon: Double(currentWeatherCoordinate.lon), lat: Double(currentWeatherCoordinate.lat))
         temperature = currentWeatherCoordinate.current.temp
         
-        let daily = currentWeatherCoordinate.current
-        
-        feelLikeTemperature = daily.feelsLike
-        maxTemperature = daily.temp
-        minTemperature = daily.temp
-        pressure = daily.pressure
-        humidity = daily.humidity
+        // Convert daily.dt to Date. Compare it to current date
+        let daily = currentWeatherCoordinate.daily.first { $0.dt == currentWeatherCoordinate.current.dt }
+        feelLikeTemperature = currentWeatherCoordinate.current.feelsLike
+        maxTemperature = daily?.temp.day ?? temperature
+        minTemperature = daily?.temp.day ?? temperature
+        pressure = currentWeatherCoordinate.current.pressure
+        humidity = currentWeatherCoordinate.current.humidity
         visibility = currentWeatherCoordinate.current.visibility
         windSpeed = currentWeatherCoordinate.current.windSpeed
-        conditionCode = nil
-        sunrise = daily.sunrise
-        sunset = daily.sunset
+        conditionCode = currentWeatherCoordinate.current.weather.first?.id
+        sunrise = currentWeatherCoordinate.current.sunrise
+        sunset = currentWeatherCoordinate.current.sunset
     }
 }
