@@ -26,10 +26,12 @@ struct CurrentWeather {
     let windSpeed: Double
     
     let conditionCode: Int?
+    let backgroundImageCode: Int?
     let sunrise: Int?
     let sunset: Int?
     
     let dailyWeather: [Daily]
+    let dailyWeatherDT: [Daily]
 //    let dailyWeatherForTime: Current
 
     init(currentWeatherCoordinate: CurrentWeatherDataByCoordinate) {
@@ -51,9 +53,11 @@ struct CurrentWeather {
         visibility = currentWeatherCoordinate.current.visibility
         windSpeed = currentWeatherCoordinate.current.windSpeed
         conditionCode = currentWeatherCoordinate.current.weather.first?.id
+        backgroundImageCode = currentWeatherCoordinate.current.weather.first?.id
         sunrise = currentWeatherCoordinate.current.sunrise
         sunset = currentWeatherCoordinate.current.sunset
         self.dailyWeather = currentWeatherCoordinate.daily
+        self.dailyWeatherDT = currentWeatherCoordinate.daily
 //        self.dailyWeatherForTime = currentWeatherCoordinate.current
     }
 }

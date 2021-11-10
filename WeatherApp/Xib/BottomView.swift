@@ -35,4 +35,13 @@ class BottomView: UIView {
         contentView.frame = self.bounds
         contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
     }
+    
+    func setUpViewByDaily(_ daily: Daily) {
+        dateLabel.text = Date(timeIntervalSince1970: daily.dt).formatted("E")
+        timeLabel.text = Date(timeIntervalSince1970: daily.dt).formatted("h:mm")
+    }
+    
+    func setUpViewByWeather(_ weather: CurrentWeather) {
+        windSpeed.text = weather.windSpeed.wholeNumberString
+    }
 }

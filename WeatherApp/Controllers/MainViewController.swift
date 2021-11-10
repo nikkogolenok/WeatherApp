@@ -17,6 +17,7 @@ class MainViewController: UIViewController {
     private let disposeBag = DisposeBag()
     
     // MARK: - Outlet
+    @IBOutlet weak var backgroundImage: UIImageView!
     @IBOutlet weak var mainView: UIView!
     @IBOutlet weak var topView: TopView!
     @IBOutlet weak var leftView: LeftView!
@@ -92,6 +93,8 @@ class MainViewController: UIViewController {
     
     // MARK: - Methods
     private func updateInterfaceWith(weather: CurrentWeather) {
+        self.backgroundImage.image = UIImage(named: weather.backgroundImageCode!.backgroundNameString)
+        
         // MainView
         self.cityName.text = weather.cityName
         self.imageIconForWeater.image = UIImage(systemName: weather.conditionCode.systemIconNameString)
@@ -105,6 +108,8 @@ class MainViewController: UIViewController {
         self.rightView.minTemperature.text = weather.minTemperature.wholeNumberString
         self.rightView.visibilityValueLabel.text = String(weather.visibility/1000)
         // BottomView
+        
+        // look BottomView
         self.bottonView.windSpeed.text = weather.windSpeed.wholeNumberString
         // WeatherViewByDay
         for dailyWeatherByDay in weather.dailyWeather {
@@ -113,6 +118,8 @@ class MainViewController: UIViewController {
             self.weatherByDayStackView.addArrangedSubview(view)
         }
         // WeatherViewByTime
+        
+        // look WeatherViewByTime
 //        for dailyWeatherByTime in weather {
 //            let view = WeatherViewByTime()
 //            view.setUpView(dailyWeatherByTime)
@@ -126,14 +133,6 @@ class MainViewController: UIViewController {
         
         navigationController?.pushViewController(viewController, animated: true)
     }
-    
-    
-    @IBAction func goToSearchVC(_ sender: UIButton) {
-        guard let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SearchVC") as? LocationViewController else { return }
-
-        navigationController?.pushViewController(viewController, animated: true)
-    }
-    
     
     @IBAction func goToSettingsVC(_ sender: UIButton) {
         guard let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SettingsVC") as? SettingsViewController else { return }

@@ -37,7 +37,7 @@ class WeatherViewByTime: UIView {
         contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
     }
     
-    func setUpView(weather: CurrentWeather) {
+    func setUpView(_ weather: CurrentWeather) {
         
         self.tempertureByTime.text = "15:20"
         self.imageByTime.image = UIImage(systemName: weather.conditionCode.systemIconNameString)

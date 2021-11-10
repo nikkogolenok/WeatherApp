@@ -15,10 +15,11 @@ extension MainViewController {
         
         alertController.addTextField { tf in
             let cities = "Введите название города"
+            tf.autocapitalizationType = .words
             tf.placeholder = cities
         }
         
-        let searchAction = UIAlertAction(title: "Search", style: .default) { action in
+        let searchAction = UIAlertAction(title: "Искать", style: .default) { action in
             
             let textField = alertController.textFields?.first
             
@@ -30,7 +31,7 @@ extension MainViewController {
             }
         }
         
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        let cancelAction = UIAlertAction(title: "Отмена", style: .cancel, handler: nil)
         
         alertController.addAction(searchAction)
         alertController.addAction(cancelAction)

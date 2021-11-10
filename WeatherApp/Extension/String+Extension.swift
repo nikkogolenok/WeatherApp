@@ -17,6 +17,14 @@ extension String {
     static let sunSystemWeatherImage = "sun.min.fill"
     static let cloudSystemWeatherImage = "cloud.fill"
     static let defaultSystemWeatherImage = "nosign"
+    
+    static let backgroundThunderstorm = "thunderstormBackground"
+    static let backgroundDrizzle = "drizzleBackground"
+    static let backgroundRain = "rainBackground"
+    static let backgroundSnow = "snowBackground"
+    static let backgroundAtmosphere = "atmosphereBackground"
+    static let backgroundClear = "sunBackground"
+    static let backgroundCloud = "cloudBackground"
 }
 
 

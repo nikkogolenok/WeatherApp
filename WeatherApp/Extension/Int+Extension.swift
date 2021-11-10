@@ -29,3 +29,18 @@ extension Optional where Wrapped == Int {
         return number.systemIconNameString
     }
 }
+
+extension Int {
+    var backgroundNameString: String {
+        switch self {
+        case 200...232: return .backgroundThunderstorm
+        case 300...321: return .backgroundDrizzle
+        case 500...531: return .backgroundRain
+        case 600...622: return .backgroundSnow
+        case 701...781: return .backgroundAtmosphere
+        case 800:       return .backgroundClear
+        case 801...804: return .backgroundCloud
+        default: return .defaultSystemWeatherImage
+        }
+    }
+}
