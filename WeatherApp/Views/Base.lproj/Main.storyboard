@@ -75,14 +75,25 @@
                                             <action selector="goToMapVC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="unO-cJ-Vkv"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sFc-ko-X9F">
-                                        <rect key="frame" x="143.5" y="0.0" width="89" height="45"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qtP-If-MPU">
+                                        <rect key="frame" x="111.5" y="0.0" width="45" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="qtP-If-MPU" secondAttribute="height" multiplier="1:1" id="k41-U6-OxY"/>
+                                        </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="magnifyingglass" catalog="system" title="Минск"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="magnifyingglass" catalog="system">
+                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
                                         <connections>
-                                            <action selector="goToSearchVC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pJl-VR-2eF"/>
+                                            <action selector="searchPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TKA-j3-6Y9"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZOd-Yi-MOf">
+                                        <rect key="frame" x="223" y="0.0" width="41.5" height="45"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Hb-2r-7pN">
                                         <rect key="frame" x="331" y="0.0" width="45" height="45"/>
                                         <constraints>
@@ -126,19 +137,19 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kLb-wt-Kcp" customClass="TopView" customModule="WeatherApp" customModuleProvider="target">
-                                        <rect key="frame" x="142" y="25" width="120" height="71"/>
+                                        <rect key="frame" x="132" y="25" width="140" height="71"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="71" id="4Et-ih-ToZ"/>
-                                            <constraint firstAttribute="width" constant="120" id="xy9-Nw-J7A"/>
+                                            <constraint firstAttribute="width" constant="140" id="xy9-Nw-J7A"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OX0-j6-cgX" customClass="BottomView" customModule="WeatherApp" customModuleProvider="target">
-                                        <rect key="frame" x="102" y="309" width="200" height="70"/>
+                                        <rect key="frame" x="109.5" y="309" width="185" height="70"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="70" id="a16-Lt-Yd5"/>
-                                            <constraint firstAttribute="width" constant="200" id="ujL-bs-D7O"/>
+                                            <constraint firstAttribute="width" constant="185" id="ujL-bs-D7O"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -163,12 +174,24 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="XNr-cf-Mhd">
                                         <rect key="frame" x="0.0" y="0.0" width="404" height="115"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mni-gH-deu" customClass="WeatherViewByDay" customModule="WeatherApp" customModuleProvider="target">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mni-gH-deu">
                                                 <rect key="frame" x="0.0" y="0.0" width="404" height="50"/>
                                                 <subviews>
                                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Ao-OY-lVY">
                                                         <rect key="frame" x="0.0" y="1" width="404" height="49"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <subviews>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r4T-JI-1GR">
+                                                                <rect key="frame" x="102" y="0.0" width="200" height="49"/>
+                                                            </stackView>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="r4T-JI-1GR" firstAttribute="height" secondItem="NUU-f7-9e7" secondAttribute="height" id="MTA-8A-RLB"/>
+                                                            <constraint firstItem="r4T-JI-1GR" firstAttribute="trailing" secondItem="Oh9-Os-Nt0" secondAttribute="trailing" id="Wwb-gX-57u"/>
+                                                            <constraint firstItem="Oh9-Os-Nt0" firstAttribute="top" secondItem="r4T-JI-1GR" secondAttribute="top" id="dVS-4b-aqL"/>
+                                                            <constraint firstItem="r4T-JI-1GR" firstAttribute="leading" secondItem="Oh9-Os-Nt0" secondAttribute="leading" id="po4-r0-1Y2"/>
+                                                            <constraint firstItem="r4T-JI-1GR" firstAttribute="bottom" secondItem="Oh9-Os-Nt0" secondAttribute="bottom" id="yR4-Xo-9w8"/>
+                                                        </constraints>
                                                         <viewLayoutGuide key="contentLayoutGuide" id="Oh9-Os-Nt0"/>
                                                         <viewLayoutGuide key="frameLayoutGuide" id="NUU-f7-9e7"/>
                                                     </scrollView>
@@ -184,8 +207,28 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rw3-hd-Q7v" customClass="WeatherViewByTime" customModule="WeatherApp" customModuleProvider="target">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rw3-hd-Q7v">
                                                 <rect key="frame" x="0.0" y="52" width="404" height="63"/>
+                                                <subviews>
+                                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vac-Ub-uGO">
+                                                        <rect key="frame" x="0.0" y="0.0" width="404" height="63"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <subviews>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aBO-Zy-PeY">
+                                                                <rect key="frame" x="0.0" y="0.0" width="404" height="63"/>
+                                                            </stackView>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="aBO-Zy-PeY" firstAttribute="top" secondItem="eml-xd-oa6" secondAttribute="top" id="LID-Hj-beJ"/>
+                                                            <constraint firstItem="aBO-Zy-PeY" firstAttribute="bottom" secondItem="eml-xd-oa6" secondAttribute="bottom" id="TTB-bB-P1p"/>
+                                                            <constraint firstItem="aBO-Zy-PeY" firstAttribute="height" secondItem="5x5-Ii-ha9" secondAttribute="height" id="VDb-wA-GWt"/>
+                                                            <constraint firstItem="aBO-Zy-PeY" firstAttribute="trailing" secondItem="eml-xd-oa6" secondAttribute="trailing" id="aja-Eo-zbc"/>
+                                                            <constraint firstItem="aBO-Zy-PeY" firstAttribute="leading" secondItem="eml-xd-oa6" secondAttribute="leading" id="tTt-sX-47r"/>
+                                                        </constraints>
+                                                        <viewLayoutGuide key="contentLayoutGuide" id="eml-xd-oa6"/>
+                                                        <viewLayoutGuide key="frameLayoutGuide" id="5x5-Ii-ha9"/>
+                                                    </scrollView>
+                                                </subviews>
                                             </view>
                                         </subviews>
                                         <constraints>
@@ -201,20 +244,6 @@
                                     <constraint firstItem="XNr-cf-Mhd" firstAttribute="leading" secondItem="fbG-GV-3kb" secondAttribute="leading" id="FOH-ep-K6T"/>
                                 </constraints>
                             </view>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y3R-uw-L3C">
-                                <rect key="frame" x="5" y="801" width="404" height="61"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <viewLayoutGuide key="contentLayoutGuide" id="3kF-8c-Tic"/>
-                                <viewLayoutGuide key="frameLayoutGuide" id="A0M-Zd-X6d"/>
-                            </scrollView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZgL-T8-fab">
-                                <rect key="frame" x="172.5" y="148" width="69" height="31"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Search"/>
-                                <connections>
-                                    <action selector="searchPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="49s-yR-a5A"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -223,7 +252,6 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xIX-GG-xJI" secondAttribute="trailing" constant="19" id="4Ws-32-Lhl"/>
                             <constraint firstItem="xIX-GG-xJI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="19" id="5sr-93-QLh"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fbG-GV-3kb" secondAttribute="trailing" constant="5" id="Kgk-jL-yfg"/>
-                            <constraint firstItem="ZgL-T8-fab" firstAttribute="top" secondItem="xIX-GG-xJI" secondAttribute="bottom" constant="5" id="Ndy-CI-8qq"/>
                             <constraint firstAttribute="bottom" secondItem="wUf-AB-Elc" secondAttribute="bottom" id="TWe-QU-pog"/>
                             <constraint firstItem="wUf-AB-Elc" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="W9L-pq-h6I"/>
                             <constraint firstItem="xIX-GG-xJI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="Woa-gd-eD6"/>
@@ -232,7 +260,6 @@
                             <constraint firstItem="fbG-GV-3kb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="fxc-4D-VdL"/>
                             <constraint firstItem="fbG-GV-3kb" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="hS5-Ai-0hg"/>
                             <constraint firstItem="wUf-AB-Elc" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="r7j-z8-kvu"/>
-                            <constraint firstItem="ZgL-T8-fab" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tbU-A7-Uj1"/>
                             <constraint firstItem="wUf-AB-Elc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="y5I-XM-Mvw"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EUQ-SF-lmo" secondAttribute="trailing" constant="5" id="y7Y-LC-wf2"/>
                         </constraints>
@@ -240,13 +267,15 @@
                     <navigationItem key="navigationItem" id="OiW-V4-xyb"/>
                     <connections>
                         <outlet property="bottonView" destination="OX0-j6-cgX" id="zYB-vu-mfF"/>
-                        <outlet property="cityName" destination="sFc-ko-X9F" id="zSu-Y3-5Kd"/>
+                        <outlet property="cityName" destination="ZOd-Yi-MOf" id="nSi-U5-V4S"/>
                         <outlet property="footerView" destination="fbG-GV-3kb" id="vgC-QG-MLz"/>
                         <outlet property="imageIconForWeater" destination="Yb8-s9-cJS" id="Fg8-Nc-d8H"/>
                         <outlet property="leftView" destination="FC0-LY-faB" id="BFG-ob-vth"/>
                         <outlet property="mainView" destination="EUQ-SF-lmo" id="HBo-Uw-WWV"/>
                         <outlet property="rightView" destination="s2T-mU-sak" id="YFs-ec-psw"/>
                         <outlet property="topView" destination="kLb-wt-Kcp" id="NGZ-ay-Qha"/>
+                        <outlet property="weatherByDayStackView" destination="r4T-JI-1GR" id="7ew-df-oxa"/>
+                        <outlet property="weatherByTimeStackView" destination="aBO-Zy-PeY" id="mjl-gM-Kg3"/>
                         <outlet property="weatherViewByDay" destination="Mni-gH-deu" id="xC8-iI-fb5"/>
                         <outlet property="weatherViewByTime" destination="rw3-hd-Q7v" id="Otl-Sl-ghZ"/>
                     </connections>

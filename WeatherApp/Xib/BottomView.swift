@@ -13,7 +13,7 @@ class BottomView: UIView {
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var windSpeed: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
-    
+    @IBOutlet weak var dateLabel: UILabel!
     // MARK: - For using CustonView in code
     override init(frame: CGRect) {
         super.init(frame: frame)

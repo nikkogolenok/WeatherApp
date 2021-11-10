@@ -10,29 +10,38 @@ import CoreText
 
 // MARK: - CurrentWeatherDataByCoordinate
 struct CurrentWeatherDataByCoordinate: Codable {
-    let lat, lon: Double
+    let lat: Double
+    let lon: Double
     let timezone: String
     let timezoneOffset: Int
     let current: Current
     let minutely: [Minutely]
-//    let hourly: [Current]
     let daily: [Daily]
 
     enum CodingKeys: String, CodingKey {
-        case lat, lon, timezone
+        case lat
+        case lon
+        case timezone
         case timezoneOffset = "timezone_offset"
-        case current, minutely, daily//, hourly
+        case current
+        case minutely
+        case daily
     }
 }
 
 // MARK: - Current
 struct Current: Codable {
     let dt: Int
-    let sunrise, sunset: Int?
-    let temp, feelsLike: Double
-    let pressure, humidity: Int
-    let dewPoint, uvi: Double
-    let clouds, visibility: Int
+    let sunrise: Int?
+    let sunset: Int?
+    let temp: Double
+    let feelsLike: Double
+    let pressure: Int
+    let humidity: Int
+    let dewPoint: Double
+    let uvi: Double
+    let clouds: Int
+    let visibility: Int
     let windSpeed: Double
     let windDeg: Int
     let windGust: Double
@@ -41,15 +50,23 @@ struct Current: Codable {
     let rain: Rain?
 
     enum CodingKeys: String, CodingKey {
-        case dt, sunrise, sunset, temp
+        case dt
+        case sunrise
+        case sunset
+        case temp
         case feelsLike = "feels_like"
-        case pressure, humidity
+        case pressure
+        case humidity
         case dewPoint = "dew_point"
-        case uvi, clouds, visibility
+        case uvi
+        case clouds
+        case visibility
         case windSpeed = "wind_speed"
         case windDeg = "wind_deg"
         case windGust = "wind_gust"
-        case weather, pop, rain
+        case weather
+        case pop
+        case rain
     }
 }
 
@@ -100,7 +117,6 @@ struct Daily: Codable {
     let feelsLike: FeelsLike
     let pressure: Int
     let humidity: Int
-//    let weather: [Weather]
 
     enum CodingKeys: String, CodingKey {
         case dt
@@ -110,16 +126,12 @@ struct Daily: Codable {
         case feelsLike = "feels_like"
         case pressure
         case humidity
-//        case weather
     }
 }
 
 // MARK: - FeelsLike
 struct FeelsLike: Codable {
     let day: Double
-    let night: Double
-    let eve: Double
-    let morn: Double
 }
 
 // MARK: - Temp
@@ -127,9 +139,6 @@ struct Temp: Codable {
     let day: Double
     let min: Double
     let max: Double
-    let night: Double
-    let eve: Double
-    let morn: Double
 }
 
 // MARK: - Minutely

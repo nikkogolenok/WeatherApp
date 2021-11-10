@@ -22,11 +22,13 @@ class MainViewController: UIViewController {
     @IBOutlet weak var leftView: LeftView!
     @IBOutlet weak var rightView: RightView!
     @IBOutlet weak var bottonView: BottomView!
-    @IBOutlet weak var cityName: UIButton!
+    @IBOutlet weak var cityName: UILabel!
     @IBOutlet weak var imageIconForWeater: UIImageView!
     @IBOutlet weak var footerView: UIView!
     @IBOutlet weak var weatherViewByDay: WeatherViewByDay!
     @IBOutlet weak var weatherViewByTime: WeatherViewByTime!
+    @IBOutlet weak var weatherByDayStackView: UIStackView!
+    @IBOutlet weak var weatherByTimeStackView: UIStackView!
     
     // MARK: - Lifecycle
     // MARK: viewDidLoad
@@ -65,13 +67,13 @@ class MainViewController: UIViewController {
                 
                 print("Город \(String(describing: currentWeather.cityName))")
                 print("Температура \(currentWeather.temperature)")
-                print("По ощущениям \(currentWeather.feelLikeTemperatureString)")
-                print("Макс темп \(currentWeather.maxTemperatureString)")
-                print("Мин темп \(currentWeather.minTemperatureString)")
+                print("По ощущениям \(currentWeather.feelLikeTemperature.wholeNumberString)")
+                print("Макс темп \(currentWeather.maxTemperature.wholeNumberString)")
+                print("Мин темп \(currentWeather.minTemperature.wholeNumberString)")
                 print("Давление \(currentWeather.pressure)")
                 print("Влажность \(currentWeather.humidity)")
                 print("Видимость \(currentWeather.visibility/1000)")
-                print("Скорость ветра \(currentWeather.windSpeedString)")
+                print("Скорость ветра \(currentWeather.windSpeed.wholeNumberString)")
                 print("Восход \(String(describing: currentWeather.sunrise))")
                 print("закат \(String(describing: currentWeather.sunset))")
                 
@@ -91,25 +93,31 @@ class MainViewController: UIViewController {
     // MARK: - Methods
     private func updateInterfaceWith(weather: CurrentWeather) {
         // MainView
-        self.imageIconForWeater.image = UIImage(systemName: weather.systemIconNameString)
+        self.cityName.text = weather.cityName
+        self.imageIconForWeater.image = UIImage(systemName: weather.conditionCode.systemIconNameString)
         // TopView
-        self.topView.temperatureLabel.text = weather.temperatureString
-        self.topView.feelsLikeTemperatureLabel.text = weather.feelLikeTemperatureString
+        self.topView.temperatureLabel.text = weather.temperature.wholeNumberString
+        self.topView.feelsLikeTemperatureLabel.text = weather.feelLikeTemperature.wholeNumberString
         // LeftView
-        self.leftView.maxTemperature.text = weather.maxTemperatureString
+        self.leftView.maxTemperature.text = weather.maxTemperature.wholeNumberString
         self.leftView.pressureValueLabel.text = String(weather.pressure)
         // RightView
-        self.rightView.minTemperature.text = weather.minTemperatureString
+        self.rightView.minTemperature.text = weather.minTemperature.wholeNumberString
         self.rightView.visibilityValueLabel.text = String(weather.visibility/1000)
         // BottomView
-        self.bottonView.windSpeed.text = weather.windSpeedString
+        self.bottonView.windSpeed.text = weather.windSpeed.wholeNumberString
         // WeatherViewByDay
-        self.weatherViewByDay.imageByDay.image = UIImage(systemName: weather.systemIconNameString)
-        self.weatherViewByDay.maxTemperatureLabel.text = weather.maxTemperatureString
-        self.weatherViewByDay.minTemperatureLabel.text = weather.minTemperatureString
+        for dailyWeatherByDay in weather.dailyWeather {
+            let view = WeatherViewByDay()
+            view.setUpView(dailyWeatherByDay)
+            self.weatherByDayStackView.addArrangedSubview(view)
+        }
         // WeatherViewByTime
-        self.weatherViewByTime.imageByTime.image = UIImage(systemName: weather.systemIconNameString)
-        self.weatherViewByTime.tempertureByTime.text = weather.temperatureString
+//        for dailyWeatherByTime in weather {
+//            let view = WeatherViewByTime()
+//            view.setUpView(dailyWeatherByTime)
+//            self.weatherByTimeStackView.addArrangedSubview(view)
+//        }
     }
     
     // MARK: - Actions

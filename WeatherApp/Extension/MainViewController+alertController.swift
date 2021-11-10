@@ -14,8 +14,8 @@ extension MainViewController {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: style)
         
         alertController.addTextField { tf in
-            let cities = ["Brest", "Vitebsk", "Grodno", "Gomel", "Mogilev", "Minsk", "New York"]
-            tf.placeholder = cities.randomElement()
+            let cities = "Введите название города"
+            tf.placeholder = cities
         }
         
         let searchAction = UIAlertAction(title: "Search", style: .default) { action in

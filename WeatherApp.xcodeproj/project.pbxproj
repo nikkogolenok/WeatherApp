@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		441700312739AC8D0088C5C4 /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 441700302739AC8D0088C5C4 /* Double+Extension.swift */; };
+		441700332739AD710088C5C4 /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 441700322739AD710088C5C4 /* Int+Extension.swift */; };
+		441700352739AE6D0088C5C4 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 441700342739AE6D0088C5C4 /* String+Extension.swift */; };
+		44170037273A5DB20088C5C4 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44170036273A5DB20088C5C4 /* Date+Extension.swift */; };
 		447D441C2703377C00302C5B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447D441B2703377C00302C5B /* AppDelegate.swift */; };
 		447D441E2703377C00302C5B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447D441D2703377C00302C5B /* SceneDelegate.swift */; };
 		447D44202703377C00302C5B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447D441F2703377C00302C5B /* MainViewController.swift */; };
@@ -45,6 +49,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		441700302739AC8D0088C5C4 /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
+		441700322739AD710088C5C4 /* Int+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
+		441700342739AE6D0088C5C4 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		44170036273A5DB20088C5C4 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		447D44182703377B00302C5B /* WeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		447D441B2703377C00302C5B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		447D441D2703377C00302C5B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -179,6 +187,10 @@
 				44AA76112705287700BD27FA /* LocationViewController+Extension.swift */,
 				44E55C55270C6D66009EF745 /* MainViewController+Extension.swift */,
 				448170C2271F0BC900EF52C6 /* MainViewController+alertController.swift */,
+				441700302739AC8D0088C5C4 /* Double+Extension.swift */,
+				441700322739AD710088C5C4 /* Int+Extension.swift */,
+				441700342739AE6D0088C5C4 /* String+Extension.swift */,
+				44170036273A5DB20088C5C4 /* Date+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -310,10 +322,13 @@
 				448170BB271C442300EF52C6 /* LeftView.swift in Sources */,
 				44B35549272ADCF800C735D3 /* LocationData.swift in Sources */,
 				447D443427044C5900302C5B /* CurrentWeatherDataByCity.swift in Sources */,
+				441700352739AE6D0088C5C4 /* String+Extension.swift in Sources */,
 				447D44372704858A00302C5B /* UIView+Extension.swift in Sources */,
+				44170037273A5DB20088C5C4 /* Date+Extension.swift in Sources */,
 				447D441E2703377C00302C5B /* SceneDelegate.swift in Sources */,
 				44B355402729EBD700C735D3 /* TopView.swift in Sources */,
 				44AA76152705EA5800BD27FA /* CurrentWeather.swift in Sources */,
+				441700332739AD710088C5C4 /* Int+Extension.swift in Sources */,
 				448170B5271B6D5500EF52C6 /* WeatherViewByTime.swift in Sources */,
 				448170B3271B5F4000EF52C6 /* WeatherViewByDay.swift in Sources */,
 				447D44392704A5DD00302C5B /* SettingsViewController.swift in Sources */,
@@ -324,6 +339,7 @@
 				44B355442729EC4700C735D3 /* BottomView.swift in Sources */,
 				448170C3271F0BC900EF52C6 /* MainViewController+alertController.swift in Sources */,
 				44E55C54270C4C49009EF745 /* Constants.swift in Sources */,
+				441700312739AC8D0088C5C4 /* Double+Extension.swift in Sources */,
 				448170C1271E155E00EF52C6 /* CurrentWeatherDataByCoordinate.swift in Sources */,
 				44E55C56270C6D66009EF745 /* MainViewController+Extension.swift in Sources */,
 				448170BD271C49AE00EF52C6 /* RightView.swift in Sources */,

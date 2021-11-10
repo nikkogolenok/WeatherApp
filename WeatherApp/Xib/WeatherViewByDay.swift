@@ -38,4 +38,13 @@ class WeatherViewByDay: UIView {
         contentView.frame = self.bounds
         contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
     }
+    
+    func setUpView(_ daily: Daily /*,weather: CurrentWeather*/) {
+        dayLabel.text = Date(timeIntervalSince1970: daily.dt).formatted("dd.MM")
+        
+        self.imageByDay.image = UIImage(systemName: .defaultSystemWeatherImage)
+        //self.imageByDay.image = UIImage(systemName: weather.conditionCode.systemIconNameString)
+        self.maxTemperatureLabel.text = daily.temp.max.wholeNumberString
+        self.minTemperatureLabel.text = daily.temp.min.wholeNumberString
+    }
 }
