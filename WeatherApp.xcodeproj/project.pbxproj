@@ -97,6 +97,60 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4417005C273D3CE40088C5C4 /* WeatherViewByTime */ = {
+			isa = PBXGroup;
+			children = (
+				448170B4271B6D5500EF52C6 /* WeatherViewByTime.swift */,
+				448170B6271B6D7000EF52C6 /* WeatherViewByTime.xib */,
+			);
+			path = WeatherViewByTime;
+			sourceTree = "<group>";
+		};
+		4417005D273D3D090088C5C4 /* WeatherViewByDay */ = {
+			isa = PBXGroup;
+			children = (
+				448170B2271B5F4000EF52C6 /* WeatherViewByDay.swift */,
+				448170B0271B5F1300EF52C6 /* WeatherViewByDay.xib */,
+			);
+			path = WeatherViewByDay;
+			sourceTree = "<group>";
+		};
+		4417005E273D3D180088C5C4 /* RightView */ = {
+			isa = PBXGroup;
+			children = (
+				448170BC271C49AE00EF52C6 /* RightView.swift */,
+				448170BE271C49D300EF52C6 /* RightView.xib */,
+			);
+			path = RightView;
+			sourceTree = "<group>";
+		};
+		4417005F273D3D210088C5C4 /* LeftView */ = {
+			isa = PBXGroup;
+			children = (
+				448170BA271C442300EF52C6 /* LeftView.swift */,
+				448170B8271C440700EF52C6 /* LeftView.xib */,
+			);
+			path = LeftView;
+			sourceTree = "<group>";
+		};
+		44170060273D3D2F0088C5C4 /* BottomView */ = {
+			isa = PBXGroup;
+			children = (
+				44B355432729EC4700C735D3 /* BottomView.swift */,
+				44B355452729EC5600C735D3 /* BottomView.xib */,
+			);
+			path = BottomView;
+			sourceTree = "<group>";
+		};
+		44170061273D3D3F0088C5C4 /* TopView */ = {
+			isa = PBXGroup;
+			children = (
+				44B3553F2729EBD700C735D3 /* TopView.swift */,
+				44B355412729EBF000C735D3 /* TopView.xib */,
+			);
+			path = TopView;
+			sourceTree = "<group>";
+		};
 		447D440F2703377B00302C5B = {
 			isa = PBXGroup;
 			children = (
@@ -187,18 +241,12 @@
 		448170A52719A06A00EF52C6 /* Xib */ = {
 			isa = PBXGroup;
 			children = (
-				44B3553F2729EBD700C735D3 /* TopView.swift */,
-				44B355412729EBF000C735D3 /* TopView.xib */,
-				44B355432729EC4700C735D3 /* BottomView.swift */,
-				44B355452729EC5600C735D3 /* BottomView.xib */,
-				448170BA271C442300EF52C6 /* LeftView.swift */,
-				448170B8271C440700EF52C6 /* LeftView.xib */,
-				448170BC271C49AE00EF52C6 /* RightView.swift */,
-				448170BE271C49D300EF52C6 /* RightView.xib */,
-				448170B2271B5F4000EF52C6 /* WeatherViewByDay.swift */,
-				448170B0271B5F1300EF52C6 /* WeatherViewByDay.xib */,
-				448170B4271B6D5500EF52C6 /* WeatherViewByTime.swift */,
-				448170B6271B6D7000EF52C6 /* WeatherViewByTime.xib */,
+				44170061273D3D3F0088C5C4 /* TopView */,
+				44170060273D3D2F0088C5C4 /* BottomView */,
+				4417005F273D3D210088C5C4 /* LeftView */,
+				4417005E273D3D180088C5C4 /* RightView */,
+				4417005D273D3D090088C5C4 /* WeatherViewByDay */,
+				4417005C273D3CE40088C5C4 /* WeatherViewByTime */,
 			);
 			path = Xib;
 			sourceTree = "<group>";

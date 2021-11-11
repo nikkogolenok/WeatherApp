@@ -93,7 +93,7 @@ class MainViewController: UIViewController {
     
     // MARK: - Methods
     private func updateInterfaceWith(weather: CurrentWeather) {
-        self.backgroundImage.image = UIImage(named: weather.backgroundImageCode!.backgroundNameString)
+        self.backgroundImage.image = UIImage(named: weather.backgroundImageCode.backgroundNameString)
         
         // MainView
         self.cityName.text = weather.cityName

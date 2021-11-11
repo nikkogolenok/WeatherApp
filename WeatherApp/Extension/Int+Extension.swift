@@ -44,3 +44,11 @@ extension Int {
         }
     }
 }
+
+extension Optional where Wrapped == Int {
+    var backgroundNameString: String {
+        guard let number = self else { return .defaultSystemWeatherImage }
+        
+        return number.backgroundNameString
+    }
+}
