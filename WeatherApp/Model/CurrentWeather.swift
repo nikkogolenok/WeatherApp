@@ -10,29 +10,21 @@ import Foundation
 struct CurrentWeather {
     var cityName: String?
     let coordinate: Coord
-    
     let temperature: Double
-    
     let feelLikeTemperature: Double
-    
     let maxTemperature: Double
-    
     let minTemperature: Double
-    
     let pressure: Int
     let humidity: Int
     let visibility: Int
-    
     let windSpeed: Double
-    
     let conditionCode: Int?
     let backgroundImageCode: Int?
+    let textTypeWeather: Int?
     let sunrise: Int?
     let sunset: Int?
-    
     let dailyWeather: [Daily]
-    let dailyWeatherDT: [Daily]
-//    let dailyWeatherForTime: Current
+    let hourlyWeather: [Hourly]
 
     init(currentWeatherCoordinate: CurrentWeatherDataByCoordinate) {
         cityName = nil
@@ -54,10 +46,10 @@ struct CurrentWeather {
         windSpeed = currentWeatherCoordinate.current.windSpeed
         conditionCode = currentWeatherCoordinate.current.weather.first?.id
         backgroundImageCode = currentWeatherCoordinate.current.weather.first?.id
+        textTypeWeather = currentWeatherCoordinate.current.weather.first?.id
         sunrise = currentWeatherCoordinate.current.sunrise
         sunset = currentWeatherCoordinate.current.sunset
         self.dailyWeather = currentWeatherCoordinate.daily
-        self.dailyWeatherDT = currentWeatherCoordinate.daily
-//        self.dailyWeatherForTime = currentWeatherCoordinate.current
+        hourlyWeather = currentWeatherCoordinate.hourly
     }
 }

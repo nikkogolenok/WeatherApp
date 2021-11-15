@@ -11,8 +11,9 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BottomView" customModule="WeatherApp" customModuleProvider="target">
             <connections>
                 <outlet property="contentView" destination="iN0-l3-epB" id="wY2-8S-UAt"/>
-                <outlet property="dateLabel" destination="R3h-Mp-5e2" id="2mv-rO-rme"/>
-                <outlet property="timeLabel" destination="oJa-9h-BgW" id="ZAf-fF-ami"/>
+                <outlet property="dateLabel" destination="R3h-Mp-5e2" id="t4q-nQ-HkD"/>
+                <outlet property="timeLabel" destination="oJa-9h-BgW" id="YwX-wl-4Xs"/>
+                <outlet property="typeWeather" destination="W97-tN-25c" id="E5Z-Mj-h8M"/>
                 <outlet property="windSpeed" destination="XC0-Hw-WYP" id="6GL-8Q-R8l"/>
             </connections>
         </placeholder>

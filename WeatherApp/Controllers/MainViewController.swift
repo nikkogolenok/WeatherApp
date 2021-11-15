@@ -108,8 +108,7 @@ class MainViewController: UIViewController {
         self.rightView.minTemperature.text = weather.minTemperature.wholeNumberString
         self.rightView.visibilityValueLabel.text = String(weather.visibility/1000)
         // BottomView
-        
-        // look BottomView
+        self.bottonView.typeWeather.text = weather.textTypeWeather.textNameString
         self.bottonView.windSpeed.text = weather.windSpeed.wholeNumberString
         // WeatherViewByDay
         for dailyWeatherByDay in weather.dailyWeather {
@@ -118,13 +117,11 @@ class MainViewController: UIViewController {
             self.weatherByDayStackView.addArrangedSubview(view)
         }
         // WeatherViewByTime
-        
-        // look WeatherViewByTime
-//        for dailyWeatherByTime in weather {
-//            let view = WeatherViewByTime()
-//            view.setUpView(dailyWeatherByTime)
-//            self.weatherByTimeStackView.addArrangedSubview(view)
-//        }
+        for dailyWeatherByTime in weather.hourlyWeather {
+            let view = WeatherViewByTime()
+            view.setUpView(dailyWeatherByTime)
+            self.weatherByTimeStackView.addArrangedSubview(view)
+        }
     }
     
     // MARK: - Actions

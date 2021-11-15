@@ -49,4 +49,8 @@ class WeatherViewByDay: UIView {
         self.maxTemperatureLabel.text = daily.temp.max.wholeNumberString
         self.minTemperatureLabel.text = daily.temp.min.wholeNumberString
     }
+    
+    func setUpViewImage(_ weather: CurrentWeather) {
+        self.imageByDay.image = UIImage(systemName: weather.conditionCode.systemIconNameString)
+    }
 }

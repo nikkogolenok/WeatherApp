@@ -25,12 +25,16 @@ extension String {
     static let backgroundAtmosphere = "atmosphereBackground"
     static let backgroundClear = "sunBackground"
     static let backgroundCloud = "cloudBackground"
+    
+    static let textThunderstorm = "Грооза"
+    static let textDrizzle = "Морось"
+    static let textRain = "Дождь"
+    static let textSnow = "Снег"
+    static let textAtmosphere = "Атмосфера"
+    static let textClear = "Ясно"
+    static let textCloud = "Облачно"
+    static let textDefault = "ХЗ что за погода"
 }
-
-
-
-
-
 
 
 

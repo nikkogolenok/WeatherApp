@@ -15,8 +15,9 @@ struct CurrentWeatherDataByCoordinate: Codable {
     let timezone: String
     let timezoneOffset: Int
     let current: Current
-    let minutely: [Minutely]
+    let hourly: [Hourly]
     let daily: [Daily]
+    let minutely: Minutely
 
     enum CodingKeys: String, CodingKey {
         case lat
@@ -24,8 +25,9 @@ struct CurrentWeatherDataByCoordinate: Codable {
         case timezone
         case timezoneOffset = "timezone_offset"
         case current
-        case minutely
+        case hourly
         case daily
+        case minutely
     }
 }
 
@@ -145,4 +147,16 @@ struct Temp: Codable {
 struct Minutely: Codable {
     let dt: Int
     let precipitation: Int
+}
+
+
+struct Hourly: Codable {
+    let dt: Int
+    let temp: Double
+
+
+    enum CodingKeys: String, CodingKey {
+        case dt
+        case temp
+    }
 }

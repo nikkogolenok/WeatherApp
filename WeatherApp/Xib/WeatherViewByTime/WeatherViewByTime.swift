@@ -37,10 +37,11 @@ class WeatherViewByTime: UIView {
         contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
     }
     
-    func setUpView(_ weather: CurrentWeather) {
+    func setUpView(_ weather: Hourly) {
         
-        self.tempertureByTime.text = "15:20"
-        self.imageByTime.image = UIImage(systemName: weather.conditionCode.systemIconNameString)
-        self.tempertureByTime.text = weather.temperature.wholeNumberString
+//        let conditionCode = weather.weather.first?.id
+        self.imageByTime.image = UIImage(systemName: .defaultSystemWeatherImage)
+        self.tempertureByTime.text = weather.temp.wholeNumberString
+        self.timeLabel.text = Date(timeIntervalSince1970: weather.dt).formatted("h:mm")
     }
 }

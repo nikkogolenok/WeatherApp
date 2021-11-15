@@ -373,114 +373,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="L1v-PE-AmG">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="550"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="550" id="8YZ-wT-71a"/>
-                                </constraints>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
                             </mapView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TuI-ra-5Ey">
-                                <rect key="frame" x="0.0" y="550" width="414" height="312"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="bottom" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="RDt-YH-py5">
-                                        <rect key="frame" x="20" y="127.5" width="374" height="57"/>
-                                        <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="fRF-cR-LtA">
-                                                <rect key="frame" x="0.0" y="0.0" width="90" height="57"/>
-                                                <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M7H-JN-YnB">
-                                                        <rect key="frame" x="29.5" y="0.0" width="31" height="31"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" secondItem="M7H-JN-YnB" secondAttribute="height" multiplier="1:1" id="mLd-gk-9in"/>
-                                                        </constraints>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" image="car" catalog="system"/>
-                                                    </button>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Спутник " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BQT-K3-aK0">
-                                                        <rect key="frame" x="16" y="39" width="57.5" height="18"/>
-                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="15"/>
-                                                        <color key="textColor" systemColor="systemOrangeColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="6g5-Qg-Nep">
-                                                <rect key="frame" x="95" y="0.0" width="89.5" height="57"/>
-                                                <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JsG-KH-6Qb">
-                                                        <rect key="frame" x="29" y="0.0" width="31" height="31"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" secondItem="JsG-KH-6Qb" secondAttribute="height" multiplier="1:1" id="Znm-Iu-stU"/>
-                                                        </constraints>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" image="car" catalog="system"/>
-                                                    </button>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Осадки" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7GP-D5-9hl">
-                                                        <rect key="frame" x="21" y="39" width="47.5" height="18"/>
-                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="15"/>
-                                                        <color key="textColor" systemColor="systemOrangeColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="G6L-hs-Vju">
-                                                <rect key="frame" x="189.5" y="0.0" width="90" height="57"/>
-                                                <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Of5-vh-yBZ">
-                                                        <rect key="frame" x="29.5" y="0.0" width="31" height="31"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" secondItem="Of5-vh-yBZ" secondAttribute="height" multiplier="1:1" id="Dhw-VK-RuK"/>
-                                                        </constraints>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" image="car" catalog="system"/>
-                                                    </button>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Радар " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R54-ql-1YE">
-                                                        <rect key="frame" x="23.5" y="39" width="42.5" height="18"/>
-                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="15"/>
-                                                        <color key="textColor" systemColor="systemOrangeColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Fx2-Bo-ZdT">
-                                                <rect key="frame" x="284.5" y="0.0" width="89.5" height="57"/>
-                                                <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cmc-t8-3nY">
-                                                        <rect key="frame" x="29" y="0.0" width="31" height="31"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" secondItem="cmc-t8-3nY" secondAttribute="height" multiplier="1:1" id="48b-bL-95g"/>
-                                                        </constraints>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" image="car" catalog="system"/>
-                                                    </button>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ураган" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MjP-K8-QOt">
-                                                        <rect key="frame" x="22.5" y="39" width="44.5" height="18"/>
-                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="15"/>
-                                                        <color key="textColor" systemColor="systemOrangeColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                            </stackView>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstItem="RDt-YH-py5" firstAttribute="centerY" secondItem="TuI-ra-5Ey" secondAttribute="centerY" id="32L-WH-ZzJ"/>
-                                    <constraint firstItem="RDt-YH-py5" firstAttribute="centerX" secondItem="TuI-ra-5Ey" secondAttribute="centerX" id="3U0-2L-ih2"/>
-                                    <constraint firstAttribute="trailing" secondItem="RDt-YH-py5" secondAttribute="trailing" constant="20" id="bbb-pO-lkq"/>
-                                    <constraint firstItem="RDt-YH-py5" firstAttribute="leading" secondItem="TuI-ra-5Ey" secondAttribute="leading" constant="20" id="qpW-gY-jUx"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="2QW-T7-QVq"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="2QW-T7-QVq" firstAttribute="trailing" secondItem="TuI-ra-5Ey" secondAttribute="trailing" id="DMU-hr-Swy"/>
                             <constraint firstItem="L1v-PE-AmG" firstAttribute="leading" secondItem="2QW-T7-QVq" secondAttribute="leading" id="EkA-rl-AZA"/>
-                            <constraint firstItem="TuI-ra-5Ey" firstAttribute="leading" secondItem="2QW-T7-QVq" secondAttribute="leading" id="Hac-Z8-A8z"/>
-                            <constraint firstItem="2QW-T7-QVq" firstAttribute="bottom" secondItem="TuI-ra-5Ey" secondAttribute="bottom" id="aNp-mK-WoX"/>
                             <constraint firstItem="L1v-PE-AmG" firstAttribute="trailing" secondItem="2QW-T7-QVq" secondAttribute="trailing" id="pmg-db-4kz"/>
-                            <constraint firstItem="TuI-ra-5Ey" firstAttribute="top" secondItem="L1v-PE-AmG" secondAttribute="bottom" id="thX-jp-fdQ"/>
+                            <constraint firstItem="2QW-T7-QVq" firstAttribute="bottom" secondItem="L1v-PE-AmG" secondAttribute="bottom" id="u5G-xx-Rkp"/>
                             <constraint firstItem="L1v-PE-AmG" firstAttribute="top" secondItem="0I8-kz-kuv" secondAttribute="top" id="x8P-Ha-zdG"/>
                         </constraints>
                     </view>
@@ -492,11 +393,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="hurricaneImage" destination="cmc-t8-3nY" id="mvX-L0-GYX"/>
                         <outlet property="mapView" destination="L1v-PE-AmG" id="PSJ-eH-sHP"/>
-                        <outlet property="precipitationImage" destination="JsG-KH-6Qb" id="cAv-zQ-8le"/>
-                        <outlet property="radarImage" destination="Of5-vh-yBZ" id="8n5-bu-OA4"/>
-                        <outlet property="satelliteImage" destination="M7H-JN-YnB" id="3jh-F2-SnP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZDp-jY-9dS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -523,15 +420,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="car" catalog="system" width="128" height="93"/>
         <image name="gearshape" catalog="system" width="128" height="121"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="network" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
