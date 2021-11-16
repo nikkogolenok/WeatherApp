@@ -75,4 +75,3 @@ extension Optional where Wrapped == Int {
         return number.textNameString
     }
 }
-
