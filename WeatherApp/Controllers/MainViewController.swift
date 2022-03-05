@@ -17,27 +17,24 @@ class MainViewController: UIViewController {
     
     // MARK: - Outlet
     @IBOutlet weak var backgroundImage: UIImageView!
+    @IBOutlet weak var textFieldForCity: UITextField!
     @IBOutlet weak var mainView: UIView!
     @IBOutlet weak var topView: TopView!
     @IBOutlet weak var leftView: LeftView!
     @IBOutlet weak var rightView: RightView!
     @IBOutlet weak var bottonView: BottomView!
-    @IBOutlet weak var cityName: UILabel!
     @IBOutlet weak var imageIconForWeater: UIImageView!
-    @IBOutlet weak var footerView: UIView!
-    @IBOutlet weak var weatherViewByDay: WeatherViewByDay!
-    @IBOutlet weak var weatherViewByTime: WeatherViewByTime!
-    @IBOutlet weak var weatherByDayStackView: UIStackView!
-    @IBOutlet weak var weatherByTimeStackView: UIStackView!
+    @IBOutlet weak var shareButton: UIButton!
     
     // MARK: - Lifecycle
     // MARK: viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
     
+        textFieldForCity.delegate = self
         mainView.backgroundColor = .black
         mainView.alpha = 0.4
-        footerView.alpha = 0.5
+        shareButton.alpha = 0.4
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyKilometer
         locationManager.requestAlwaysAuthorization()
@@ -65,7 +62,6 @@ class MainViewController: UIViewController {
             DispatchQueue.main.async {
                 self.updateInterfaceWith(weather: currentWeather)
                 
-                print("Город \(String(describing: currentWeather.cityName))")
                 print("Температура \(currentWeather.temperature)")
                 print("По ощущениям \(currentWeather.feelLikeTemperature.wholeNumberString)")
                 print("Макс темп \(currentWeather.maxTemperature.wholeNumberString)")
@@ -74,8 +70,6 @@ class MainViewController: UIViewController {
                 print("Влажность \(currentWeather.humidity)")
                 print("Видимость \(currentWeather.visibility/1000)")
                 print("Скорость ветра \(currentWeather.windSpeed.wholeNumberString)")
-                print("Восход \(String(describing: currentWeather.sunrise))")
-                print("закат \(String(describing: currentWeather.sunset))")
                 
             }
         }
@@ -93,9 +87,7 @@ class MainViewController: UIViewController {
     // MARK: - Methods
     private func updateInterfaceWith(weather: CurrentWeather) {
         self.backgroundImage.image = UIImage(named: weather.backgroundImageCode.backgroundNameString)
-        
         // MainView
-        self.cityName.text = weather.cityName
         self.imageIconForWeater.image = UIImage(systemName: weather.conditionCode.systemIconNameString)
         // TopView
         self.topView.temperatureLabel.text = weather.temperature.wholeNumberString
@@ -109,18 +101,16 @@ class MainViewController: UIViewController {
         // BottomView
         self.bottonView.typeWeather.text = weather.textTypeWeather.textNameString
         self.bottonView.windSpeed.text = weather.windSpeed.wholeNumberString
-        // WeatherViewByDay
-//        for dailyWeatherByDay in weather.dailyWeather {
-//            let view = WeatherViewByDay()
-//            view.setUpView(dailyWeatherByDay)
-//            self.weatherByDayStackView.addArrangedSubview(view)
-//        }
-        // WeatherViewByTime
-//        for dailyWeatherByTime in weather.hourlyWeather {
-//            let view = WeatherViewByTime()
-//            view.setUpView(dailyWeatherByTime)
-//            self.weatherByTimeStackView.addArrangedSubview(view)
-//        }
+    }
+    
+    func getCoordinateFrom(address: String) {
+        CLGeocoder().geocodeAddressString(address) { [weak self] coordinate, error in
+            guard let coordinate = coordinate?.first?.location?.coordinate,
+                  error == nil,
+                  let self = self
+            else { return }
+            self.networkWeatherManager.fetchCurrentWeather(forRequestType: .coordinate(latitude: coordinate.latitude, longitude: coordinate.longitude))
+        }
     }
     
     // MARK: - Actions
@@ -136,10 +126,16 @@ class MainViewController: UIViewController {
         navigationController?.pushViewController(viewController, animated: true)
     }
     
-    @IBAction func searchPressed(_ sender: UIButton) {
-        self.presentSearchAlertController(withTitle: "Введите город", message: nil, style: .alert) { [unowned self] city in
-            self.networkWeatherManager.fetchCurrentWeather(forRequestType: .cityName(city: city))
+    @IBAction func ShareButtonAction(_ sender: UIButton) {
+        guard let weatherForShare = NetworkWeatherManager.shared.currentWeather?.getDataWeather() else { return }
+        
+        let shareController = UIActivityViewController(activityItems: weatherForShare, applicationActivities: nil)
+        shareController.completionWithItemsHandler = { _, bool, _, _ in
+            if bool {
+                print("Share button worked!")
+            }
         }
+        present(shareController, animated: true, completion: nil)
     }
 }
 

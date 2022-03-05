@@ -8,8 +8,6 @@
 import Foundation
 
 struct CurrentWeather {
-    var cityName: String?
-    let coordinate: Coord
     let temperature: Double
     let feelLikeTemperature: Double
     let maxTemperature: Double
@@ -21,25 +19,13 @@ struct CurrentWeather {
     let conditionCode: Int?
     let backgroundImageCode: Int?
     let textTypeWeather: Int?
-    let sunrise: Int?
-    let sunset: Int?
-    //let dailyWeather: [Daily]
-    //let hourlyWeather: [Hourly]
+    let weatherDataHourly: [WeatherDataHourly]
 
     init(currentWeatherCoordinate: CurrentWeatherDataByCoordinate) {
-        cityName = nil
-        coordinate = Coord(lon: Double(currentWeatherCoordinate.lon), lat: Double(currentWeatherCoordinate.lat))
         temperature = currentWeatherCoordinate.current.temp
-        
-//        let daily = currentWeatherCoordinate.daily.first {
-//            let date = Date(timeIntervalSince1970: $0.dt)
-//
-//            return Calendar.current.isDateInToday(date)
-//        }
-        
         feelLikeTemperature = currentWeatherCoordinate.current.feelsLike
-        maxTemperature = 10 //daily?.temp.max ?? temperature
-        minTemperature =  8//daily?.temp.min ?? temperature
+        maxTemperature = currentWeatherCoordinate.current.temp
+        minTemperature =  currentWeatherCoordinate.current.temp
         pressure = currentWeatherCoordinate.current.pressure
         humidity = currentWeatherCoordinate.current.humidity
         visibility = currentWeatherCoordinate.current.visibility
@@ -47,9 +33,26 @@ struct CurrentWeather {
         conditionCode = currentWeatherCoordinate.current.weather.first?.id
         backgroundImageCode = currentWeatherCoordinate.current.weather.first?.id
         textTypeWeather = currentWeatherCoordinate.current.weather.first?.id
-        sunrise = currentWeatherCoordinate.current.sunrise
-        sunset = currentWeatherCoordinate.current.sunset
-        //self.dailyWeather = [] //currentWeatherCoordinate.daily
-        //hourlyWeather = currentWeatherCoordinate.hourly
+        
+        var weatherDataDictionary = [Date: [Hourly]]()
+        currentWeatherCoordinate.hourly.forEach {
+            let date = Date(timeIntervalSince1970: $0.dt)
+            let hour = Calendar.current.component(.hour, from: date)
+            guard hour % 2 == 0 else { return }
+            let day = Calendar.current.startOfDay(for: date)
+            weatherDataDictionary[day, default: []].append($0)
+        }
+        self.weatherDataHourly = weatherDataDictionary.map {
+            WeatherDataHourly(date: $0.key, hourly: $0.value)
+        }
     }
+    
+    func getDataWeather() -> [String] {
+        return ["Temperature: \(String(temperature)), feel like temperature: \(feelLikeTemperature), pressure: \(pressure), humidity: \(humidity), visibility: \(visibility), windSpeed: \(windSpeed)!"]
+    }
+}
+
+struct WeatherDataHourly {
+    let date: Date
+    let hourly: [Hourly]
 }

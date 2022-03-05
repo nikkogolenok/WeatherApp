@@ -32,3 +32,14 @@ extension MainViewController: CLLocationManagerDelegate {
         print(error.localizedDescription)
     }
 }
+
+extension MainViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if let address = textField.text {
+            getCoordinateFrom(address: address)
+        }
+        
+        self.view.endEditing(true)
+        return false
+    }
+}

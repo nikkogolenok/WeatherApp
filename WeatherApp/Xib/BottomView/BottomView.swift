@@ -13,8 +13,6 @@ class BottomView: UIView {
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var typeWeather: UILabel!
     @IBOutlet weak var windSpeed: UILabel!
-    @IBOutlet weak var timeLabel: UILabel!
-    @IBOutlet weak var dateLabel: UILabel!
     // MARK: - For using CustonView in code
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -35,11 +33,6 @@ class BottomView: UIView {
         addSubview(contentView)
         contentView.frame = self.bounds
         contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
-    }
-    
-    func setUpViewByDaily(_ daily: Daily) {
-        dateLabel.text = Date(timeIntervalSince1970: daily.dt).formatted("E")
-        timeLabel.text = Date(timeIntervalSince1970: daily.dt).formatted("h:mm")
     }
     
     func setUpViewByWeather(_ weather: CurrentWeather) {
