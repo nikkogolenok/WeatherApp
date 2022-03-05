@@ -44,5 +44,6 @@ class BottomView: UIView {
     
     func setUpViewByWeather(_ weather: CurrentWeather) {
         windSpeed.text = weather.windSpeed.wholeNumberString
+        typeWeather.text = weather.textTypeWeather.textNameString
     }
 }

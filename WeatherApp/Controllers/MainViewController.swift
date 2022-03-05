@@ -7,14 +7,13 @@
 
 import UIKit
 import CoreLocation
-import RxSwift
+
 
 class MainViewController: UIViewController {
 
     // MARK: - Variables
     let locationManager = CLLocationManager()
     var networkWeatherManager = NetworkWeatherManager.shared
-    private let disposeBag = DisposeBag()
     
     // MARK: - Outlet
     @IBOutlet weak var backgroundImage: UIImageView!
@@ -111,17 +110,17 @@ class MainViewController: UIViewController {
         self.bottonView.typeWeather.text = weather.textTypeWeather.textNameString
         self.bottonView.windSpeed.text = weather.windSpeed.wholeNumberString
         // WeatherViewByDay
-        for dailyWeatherByDay in weather.dailyWeather {
-            let view = WeatherViewByDay()
-            view.setUpView(dailyWeatherByDay)
-            self.weatherByDayStackView.addArrangedSubview(view)
-        }
+//        for dailyWeatherByDay in weather.dailyWeather {
+//            let view = WeatherViewByDay()
+//            view.setUpView(dailyWeatherByDay)
+//            self.weatherByDayStackView.addArrangedSubview(view)
+//        }
         // WeatherViewByTime
-        for dailyWeatherByTime in weather.hourlyWeather {
-            let view = WeatherViewByTime()
-            view.setUpView(dailyWeatherByTime)
-            self.weatherByTimeStackView.addArrangedSubview(view)
-        }
+//        for dailyWeatherByTime in weather.hourlyWeather {
+//            let view = WeatherViewByTime()
+//            view.setUpView(dailyWeatherByTime)
+//            self.weatherByTimeStackView.addArrangedSubview(view)
+//        }
     }
     
     // MARK: - Actions

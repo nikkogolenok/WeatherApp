@@ -30,14 +30,12 @@
 		448170BF271C49D300EF52C6 /* RightView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 448170BE271C49D300EF52C6 /* RightView.xib */; };
 		448170C1271E155E00EF52C6 /* CurrentWeatherDataByCoordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448170C0271E155E00EF52C6 /* CurrentWeatherDataByCoordinate.swift */; };
 		448170C3271F0BC900EF52C6 /* MainViewController+alertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448170C2271F0BC900EF52C6 /* MainViewController+alertController.swift */; };
-		448170C82728A8B000EF52C6 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 448170C72728A8B000EF52C6 /* RxSwift */; };
 		44AA76152705EA5800BD27FA /* CurrentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AA76142705EA5800BD27FA /* CurrentWeather.swift */; };
 		44B355402729EBD700C735D3 /* TopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B3553F2729EBD700C735D3 /* TopView.swift */; };
 		44B355422729EBF000C735D3 /* TopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44B355412729EBF000C735D3 /* TopView.xib */; };
 		44B355442729EC4700C735D3 /* BottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B355432729EC4700C735D3 /* BottomView.swift */; };
 		44B355462729EC5600C735D3 /* BottomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44B355452729EC5600C735D3 /* BottomView.xib */; };
 		44B35549272ADCF800C735D3 /* LocationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B35548272ADCF800C735D3 /* LocationData.swift */; };
-		44B3556A272B208600C735D3 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 44B35569272B208600C735D3 /* RxCocoa */; };
 		44D6ACFA27300CE000B099F1 /* NetworkWeatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D6ACF927300CE000B099F1 /* NetworkWeatherManager.swift */; };
 		44E55C54270C4C49009EF745 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E55C53270C4C49009EF745 /* Constants.swift */; };
 		44E55C56270C6D66009EF745 /* MainViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E55C55270C6D66009EF745 /* MainViewController+Extension.swift */; };
@@ -89,8 +87,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				44B3556A272B208600C735D3 /* RxCocoa in Frameworks */,
-				448170C82728A8B000EF52C6 /* RxSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,8 +271,6 @@
 			);
 			name = WeatherApp;
 			packageProductDependencies = (
-				448170C72728A8B000EF52C6 /* RxSwift */,
-				44B35569272B208600C735D3 /* RxCocoa */,
 			);
 			productName = WeatherApp;
 			productReference = 447D44182703377B00302C5B /* WeatherApp.app */;
@@ -535,7 +529,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Nikita-Kogolenok.WeatherApp1";
+				PRODUCT_BUNDLE_IDENTIFIER = "Nikita-Kogolenok.WeatherApp123";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -566,7 +560,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Nikita-Kogolenok.WeatherApp1";
+				PRODUCT_BUNDLE_IDENTIFIER = "Nikita-Kogolenok.WeatherApp123";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -607,19 +601,6 @@
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		448170C72728A8B000EF52C6 /* RxSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 448170C62728A8B000EF52C6 /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxSwift;
-		};
-		44B35569272B208600C735D3 /* RxCocoa */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 448170C62728A8B000EF52C6 /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxCocoa;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 447D44102703377B00302C5B /* Project object */;
 }

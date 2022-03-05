@@ -12,22 +12,18 @@ import CoreText
 struct CurrentWeatherDataByCoordinate: Codable {
     let lat: Double
     let lon: Double
-    let timezone: String
-    let timezoneOffset: Int
     let current: Current
     let hourly: [Hourly]
-    let daily: [Daily]
-    let minutely: Minutely
+    //let daily: [Daily]
+    //let minutely: Minutely
 
     enum CodingKeys: String, CodingKey {
         case lat
         case lon
-        case timezone
-        case timezoneOffset = "timezone_offset"
         case current
         case hourly
-        case daily
-        case minutely
+        //case daily
+        //case minutely
     }
 }
 
@@ -84,8 +80,8 @@ struct Rain: Codable {
 // MARK: - Weather
 struct Weather: Codable {
     let id: Int
-    let main: Main
-    let weatherDescription: Description
+    let main: String
+    let weatherDescription: String
     let icon: String
 
     enum CodingKeys: String, CodingKey {
@@ -96,19 +92,19 @@ struct Weather: Codable {
     }
 }
 
-enum Main: String, Codable {
-    case clear = "Clear"
-    case clouds = "Clouds"
-    case rain = "Rain"
-}
-
-enum Description: String, Codable {
-    case clearSky = "clear sky"
-    case fewClouds = "few clouds"
-    case lightRain = "light rain"
-    case overcastClouds = "overcast clouds"
-    case scatteredClouds = "scattered clouds"
-}
+//enum Main: String, Codable {
+//    case clear = "Clear"
+//    case clouds = "Clouds"
+//    case rain = "Rain"
+//}
+//
+//enum Description: String, Codable {
+//    case clearSky = "clear sky"
+//    case fewClouds = "few clouds"
+//    case lightRain = "light rain"
+//    case overcastClouds = "overcast clouds"
+//    case scatteredClouds = "scattered clouds"
+//}
 
 // MARK: - Daily
 struct Daily: Codable {

@@ -23,23 +23,23 @@ struct CurrentWeather {
     let textTypeWeather: Int?
     let sunrise: Int?
     let sunset: Int?
-    let dailyWeather: [Daily]
-    let hourlyWeather: [Hourly]
+    //let dailyWeather: [Daily]
+    //let hourlyWeather: [Hourly]
 
     init(currentWeatherCoordinate: CurrentWeatherDataByCoordinate) {
         cityName = nil
         coordinate = Coord(lon: Double(currentWeatherCoordinate.lon), lat: Double(currentWeatherCoordinate.lat))
         temperature = currentWeatherCoordinate.current.temp
         
-        let daily = currentWeatherCoordinate.daily.first {
-            let date = Date(timeIntervalSince1970: $0.dt)
-            
-            return Calendar.current.isDateInToday(date)
-        }
+//        let daily = currentWeatherCoordinate.daily.first {
+//            let date = Date(timeIntervalSince1970: $0.dt)
+//
+//            return Calendar.current.isDateInToday(date)
+//        }
         
         feelLikeTemperature = currentWeatherCoordinate.current.feelsLike
-        maxTemperature = daily?.temp.max ?? temperature
-        minTemperature = daily?.temp.min ?? temperature
+        maxTemperature = 10 //daily?.temp.max ?? temperature
+        minTemperature =  8//daily?.temp.min ?? temperature
         pressure = currentWeatherCoordinate.current.pressure
         humidity = currentWeatherCoordinate.current.humidity
         visibility = currentWeatherCoordinate.current.visibility
@@ -49,7 +49,7 @@ struct CurrentWeather {
         textTypeWeather = currentWeatherCoordinate.current.weather.first?.id
         sunrise = currentWeatherCoordinate.current.sunrise
         sunset = currentWeatherCoordinate.current.sunset
-        self.dailyWeather = currentWeatherCoordinate.daily
-        hourlyWeather = currentWeatherCoordinate.hourly
+        //self.dailyWeather = [] //currentWeatherCoordinate.daily
+        //hourlyWeather = currentWeatherCoordinate.hourly
     }
 }
